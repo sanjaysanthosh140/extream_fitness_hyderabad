@@ -1,168 +1,217 @@
-# Startup Works — Setup & Deployment Guide (For Developer)
+# Fitness Extreme International — Setup & Deployment Guide
 
-This document explains how to set up, run locally, and deploy the Startup Works
-landing page + admin leads dashboard application.
+This guide covers local setup and production deployment for the `gym_hydrabad`
+project: the Fitness Extreme International gym website for Banjara Hills,
+Hyderabad, and its lead enquiry/admin dashboard.
 
-**Stack:** Node.js (Express), MySQL, EJS (server-rendered views), Tailwind CSS
+## 1. Application overview
 
----
+- **Runtime:** Node.js and Express
+- **Database:** MySQL, accessed through `mysql2`
+- **Website:** Static files in `public/`; the landing page is `public/index.html`
+- **Admin UI:** EJS templates in `views/`
+- **Lead API:** `POST /api/submit`
+- **Admin:** `/admin` (login, lead dashboard, and Excel/PDF export)
+- **Default port:** `2000` (override with `PORT`)
 
-## 1. Project Structure
+### Project structure
 
-```
-emirates-landing/
-├── public/            # Static files, Tailwind landing page (index.html)
+```text
+gym_hydrabad/
+├── database/
+│   └── schema.sql       # Creates the leads database and table
+├── public/
+│   ├── index.html       # Public gym landing page
+│   └── img/             # Website images and logo
 ├── routes/
-│   ├── admin.js        # Admin login, dashboard, delete lead (/admin)
-│   └── form.js          # Public lead submission API (/api)
+│   ├── admin.js         # Admin login and lead dashboard routes
+│   └── form.js          # Public lead submission API
 ├── views/
-│   ├── dashboard.ejs     # Admin dashboard (leads list, export)
-│   └── login.ejs          # Admin login page
-├── db.js               # MySQL connection setup
-├── server.js            # App entry point
-├── .env.example          # Environment variable template
-└── database/
-    └── emirates_first.sql  # DB schema/data dump
+│   ├── dashboard.ejs    # Leads dashboard and exports
+│   └── login.ejs        # Admin login page
+├── db.js                # MySQL connection pool
+├── server.js            # Express application entry point
+├── package.json
+└── package-lock.json
 ```
-
----
 
 ## 2. Prerequisites
 
-Install on the server/local machine before starting:
+- Node.js 18 or newer and npm
+- MySQL 8 recommended
+- For production: a process manager such as PM2 and, when hosting on a domain,
+  a reverse proxy such as Nginx with HTTPS
 
-- **Node.js** (v18 or newer recommended) + npm
-- **MySQL** (v8 recommended)
-- **PM2** (or any process manager) — for running the app persistently
-- **Nginx** (if reverse proxy needed) — optional for local run
+## 3. Local setup
 
----
+### Install dependencies
 
-## 3. Local Setup (Run on Developer's Machine)
+From the project directory:
 
-### Step 1 — Extract project & install dependencies
 ```bash
-cd emirates-landing
 npm install
 ```
 
-### Step 2 — Set up environment variables
-```bash
-cp .env.example .env
-```
-Open `.env` and fill in real values:
+### Configure environment variables
 
-| Variable | Description |
-|---|---|
-| `DB_HOST` | MySQL host (usually `localhost`) |
-| `DB_USER` | MySQL username |
-| `DB_PASSWORD` | MySQL password |
-| `DB_NAME` | Database name (`emirates_first`) |
-| `SESSION_SECRET` | Any random secret string for session encryption |
-| `ADMIN_USERNAME` | Admin panel login username |
-| `ADMIN_PASSWORD` | Admin panel login password |
-| `PORT` | Port app runs on (e.g. `3000`) |
+There is no `.env.example` in this repository. Create a private `.env` file in
+the project root with the following values:
 
-### Step 3 — Set up the database
-```bash
-mysql -u root -p -e "CREATE DATABASE emirates_first;"
-mysql -u root -p emirates_first < database/emirates_first.sql
+```dotenv
+DB_HOST=localhost
+DB_USER=your_mysql_user
+DB_PASSWORD=your_mysql_password
+DB_NAME=emirates_first
+SESSION_SECRET=replace_with_a_long_random_secret
+ADMIN_USERNAME=choose_an_admin_username
+ADMIN_PASSWORD=choose_a_strong_admin_password
+PORT=2000
 ```
-This creates the database and imports the existing schema + any sample data.
 
-### Step 4 — Run the app locally
+Do not commit `.env` or use development credentials in production. `.env` is
+excluded by `.gitignore`.
+
+**Database name note:** `database/schema.sql` currently creates and selects a
+database named `emirates_first`. Set `DB_NAME` to that value unless you also
+update the schema to use a different database name.
+
+### Create the database and leads table
+
+Run this from the project directory in a Bash-compatible shell with MySQL
+available:
+
 ```bash
-npm start
+mysql -u root -p < database/schema.sql
 ```
-Or directly:
+
+The schema creates the database if it does not exist and creates the `leads`
+table. If using a restricted MySQL account, grant it access to the database
+before starting the app.
+
+### Start and open the application
+
+The project does not define an `npm start` script. Start it with:
+
 ```bash
 node server.js
 ```
-- Visit `http://localhost:<PORT>` → landing page
-- Visit `http://localhost:<PORT>/admin` → admin login (use `ADMIN_USERNAME` / `ADMIN_PASSWORD` from `.env`)
 
-If this loads correctly, local setup is working.
+- Website: `http://localhost:2000` (or the configured `PORT`)
+- Admin login: `http://localhost:2000/admin`
+- Lead submission endpoint: `POST http://localhost:2000/api/submit`
 
----
+Sign in using the `ADMIN_USERNAME` and `ADMIN_PASSWORD` values from `.env`.
 
-## 4. Production Deployment (On Their Server)
+## 4. Production deployment
 
-### Step 1 — Transfer project to server
-Upload the project folder (excluding `node_modules` and `.env`) to the server via Git, SFTP, or their preferred method.
+The following example assumes a Linux server, a domain, MySQL, and Nginx.
 
-### Step 2 — Install dependencies on server
+### Transfer the project
+
+Deploy the project files using Git or another secure transfer method. Do not
+deploy `.env` or `node_modules`.
+
+### Install dependencies and configure the server
+
 ```bash
-cd emirates-landing
-npm install --production
+cd gym_hydrabad
+npm ci --omit=dev
 ```
 
-### Step 3 — Configure `.env` on the server
-Repeat Step 2 from local setup, but with **production** DB credentials and a **strong** admin password (do not reuse local/dev values).
+Create `.env` on the server with production database credentials, a unique
+long `SESSION_SECRET`, strong admin credentials, and the chosen `PORT`.
+`DB_NAME` must match the database name in `database/schema.sql`.
 
-### Step 4 — Import database on server
+### Initialize MySQL
+
+For a new installation, run from the project directory:
+
 ```bash
-mysql -u root -p -e "CREATE DATABASE emirates_first;"
-mysql -u root -p emirates_first < database/emirates_first.sql
+mysql -u root -p < database/schema.sql
 ```
 
-### Step 5 — Run app with a process manager (recommended: PM2)
+For an existing installation, back up the database before applying schema
+changes. The current schema creates the `leads` table if it does not already
+exist; it does not replace existing lead data.
+
+### Configure production sessions before going live
+
+`server.js` currently uses Express's default in-memory session store and sets
+the session cookie's `secure` option to `false`. These defaults are suitable
+only for local development. For a public HTTPS deployment, configure a
+persistent session store and enable secure cookies before exposing the admin
+login.
+
+### Run the application with PM2
+
+Install PM2 on the server if needed, then start and persist the process:
+
 ```bash
 npm install -g pm2
-pm2 start server.js --name startup-works
+pm2 start server.js --name gym-hydrabad
 pm2 save
-pm2 startup   # enables auto-start on server reboot
+pm2 startup
 ```
 
-### Step 6 — Set up reverse proxy (Nginx) — if serving on a domain
-Example config (`/etc/nginx/sites-available/startupworks`):
+Run the `pm2 startup` command printed by PM2 to enable startup after a reboot.
+Confirm the app is running with `pm2 status` and review logs with
+`pm2 logs gym-hydrabad`.
+
+### Configure Nginx
+
+Example site configuration (replace `yourdomain.com` and the port as needed):
+
 ```nginx
 server {
     listen 80;
-    server_name yourdomain.com;
+    server_name yourdomain.com www.yourdomain.com;
 
     location / {
-        proxy_pass http://localhost:3000;   # match PORT from .env
+        proxy_pass http://127.0.0.1:2000;
         proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
         proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
 ```
-Then:
+
+Enable the site, test the Nginx configuration, and reload Nginx using your
+server's standard procedure.
+
+### Point DNS and enable HTTPS
+
+1. Point the domain's DNS A record to the server's public IP address.
+2. Verify the domain resolves to that server.
+3. Install Certbot and its Nginx plugin using your Linux distribution's
+   package manager.
+4. Request and configure the certificate:
+
 ```bash
-sudo ln -s /etc/nginx/sites-available/startupworks /etc/nginx/sites-enabled/
-sudo nginx -t
-sudo systemctl reload nginx
+sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 ```
 
-### Step 7 — Point domain DNS
-- Add an **A record** pointing the domain to the server's IP
-- Wait for DNS propagation (can take a few minutes to a few hours)
+## 5. Deployment checks
 
-### Step 8 — Enable SSL (HTTPS)
-```bash
-sudo apt install certbot python3-certbot-nginx
-sudo certbot --nginx -d yourdomain.com
-```
+- [ ] The gym landing page loads over HTTPS.
+- [ ] The enquiry form submits and the lead is saved in MySQL.
+- [ ] `/admin` displays the login page and accepts the configured credentials.
+- [ ] The dashboard displays submitted leads.
+- [ ] Excel and PDF exports work in the dashboard.
+- [ ] The production session store and secure cookie settings are configured.
+- [ ] PM2 starts the application after a server reboot.
+- [ ] `.env` and database credentials are not publicly accessible.
 
----
+## 6. Operational notes
 
-## 5. Post-Deployment Checklist
-
-- [ ] Landing page loads correctly on the live domain
-- [ ] Lead form submits and saves to the database
-- [ ] `/admin` login works with production credentials
-- [ ] Dashboard shows submitted leads
-- [ ] Excel/PDF export works from dashboard
-- [ ] SSL certificate active (https:// with no warnings)
-- [ ] PM2 process set to auto-restart on server reboot (`pm2 startup` + `pm2 save`)
-
----
-
-## 6. Notes for the Developer
-
-- The app runs on the port set in `.env` — change this if it conflicts with another app on the server.
-- Admin credentials should be changed from any defaults before going live.
-- If using a different server panel (cPanel, Plesk, etc.) instead of raw Nginx, the reverse proxy step will differ — the Node app itself doesn't need any changes, only how it's exposed via a domain.
+- The application listens on `PORT`, defaulting to `2000`.
+- The website uses Tailwind CSS and fonts from CDNs; those assets require
+  outbound access from the visitor's browser.
+- The form stores the visitor's name, email, phone number, and message in the
+  MySQL `leads` table.
+- Admin credentials are read from environment variables. Keep them private and
+  replace them if they are exposed.
+- If hosting through cPanel, Plesk, or another control panel, configure its
+  Node.js application and reverse proxy settings to use this project's
+  `server.js` entry point and the selected port.
