@@ -3,17 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Banjara Hills, Hyderabad | Fitness Extreme Intl</title>
-    
+    <title>Banjara Hills, Hyderabad | Fitness Extreme Intl</title>
+
     <meta
       name="description"
       content="Premium gym in Banjara Hills with cardio, strength training, steam room and personal trainers. Day pass ₹500, adjustable against your membership. Enquire today."
     />
-    <meta name="keywords" content="Fitness Extreme in Banjara Hills, gym near me Banjara Hills, gym membership Banjara Hills, personal trainer Banjara Hills, best gym Hyderabad Banjara Hills" />
+    <meta
+      name="keywords"
+      content="Fitness Extreme in Banjara Hills, gym near me Banjara Hills, gym membership Banjara Hills, personal trainer Banjara Hills, best gym Hyderabad Banjara Hills"
+    />
     <meta name="robots" content="index, follow" />
 
     <!-- Favicon using real gym logo -->
-    <link rel="icon" type="image/webp" href="/img/Copy%20of%20fei%20-%20intl.webp" />
+    <link
+      rel="icon"
+      type="image/webp"
+      href="/img/img_2.webp"
+    />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,37 +29,37 @@
         theme: {
           extend: {
             colors: {
-              brandOrange:     '#E8731A',
-              brandOrangeDark: '#C75F10',
-              brandOrangeLight:'#F47C48',
-              brandSurface:    '#F47C48',
-              inkBlack:        '#04040F',
-              inkDark:         '#0A0A1A',
-              inkCard:         '#111118',
-              inkBorder:       'rgba(255,255,255,0.20)',
-              arrowBox:        '#2F2F36',
-              waGreen:         '#1FAA59',
+              brandOrange: "#E8731A",
+              brandOrangeDark: "#C75F10",
+              brandOrangeLight: "#F47C48",
+              brandSurface: "#F47C48",
+              inkBlack: "#04040F",
+              inkDark: "#0A0A1A",
+              inkCard: "#111118",
+              inkBorder: "rgba(255,255,255,0.20)",
+              arrowBox: "#2F2F36",
+              waGreen: "#1FAA59",
             },
             fontFamily: {
-              headline: ['Oswald', 'Arial', 'sans-serif'],
-              body:     ['"Roboto Condensed"', 'Arial', 'sans-serif'],
-              action:   ['Teko', 'Arial', 'sans-serif'],
+              headline: ["Oswald", "Arial", "sans-serif"],
+              body: ['"Roboto Condensed"', "Arial", "sans-serif"],
+              action: ["Teko", "Arial", "sans-serif"],
             },
             borderRadius: {
-              DEFAULT: '0px',
-              none:    '0px',
-              sm:      '0px',
-              md:      '0px',
-              lg:      '0px',
-              xl:      '0px',
-              '2xl':   '0px',
-              '3xl':   '0px',
-              full:    '9999px',
-              photo:   '20px',
-            }
-          }
-        }
-      }
+              DEFAULT: "0px",
+              none: "0px",
+              sm: "0px",
+              md: "0px",
+              lg: "0px",
+              xl: "0px",
+              "2xl": "0px",
+              "3xl": "0px",
+              full: "9999px",
+              photo: "20px",
+            },
+          },
+        },
+      };
     </script>
 
     <!-- Google Fonts: Oswald, Roboto Condensed, and Teko -->
@@ -65,52 +72,76 @@
 
     <style>
       :root {
-        --color-orange:      #E8731A;
-        --color-orange-dark: #C75F10;
-        --color-surface:     #F47C48;
-        --color-black:       #04040F;
-        --color-dark:        #0A0A1A;
-        --color-wa:          #1FAA59;
-        --color-arrow-box:   #2F2F36;
+        --color-orange: #e8731a;
+        --color-orange-dark: #c75f10;
+        --color-surface: #f47c48;
+        --color-black: #04040f;
+        --color-dark: #0a0a1a;
+        --color-wa: #1faa59;
+        --color-arrow-box: #2f2f36;
       }
-      * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
       /* Square everything — override Tailwind's default border-radius */
-      *, ::before, ::after { border-radius: 0 !important; }
+      *,
+      ::before,
+      ::after {
+        border-radius: 0 !important;
+      }
       /* Gallery photos only get 20px rounded corners */
-      .photo-rounded, .photo-rounded img { border-radius: 20px !important; }
+      .photo-rounded,
+      .photo-rounded img {
+        border-radius: 20px !important;
+      }
       body {
-        font-family: 'Roboto Condensed', Arial, sans-serif;
+        font-family: "Roboto Condensed", Arial, sans-serif;
         font-size: 17px;
         line-height: 1.6;
         background-color: var(--color-black);
-        color: rgba(255,255,255,0.82);
+        color: rgba(255, 255, 255, 0.82);
         -webkit-font-smoothing: antialiased;
       }
-      h1, h2, h3, h4, h5, h6,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
       .font-headline,
       [class*="font-headline"] {
-        font-family: 'Oswald', Arial, sans-serif;
+        font-family: "Oswald", Arial, sans-serif;
         font-weight: 700;
         text-transform: uppercase;
         font-style: normal;
       }
-      button, .btn, nav a,
-      .btn-primary, .btn-secondary, .btn-wa, .btn-coral {
-        font-family: 'Teko', Arial, sans-serif;
+      button,
+      .btn,
+      nav a,
+      .btn-primary,
+      .btn-secondary,
+      .btn-wa,
+      .btn-coral {
+        font-family: "Teko", Arial, sans-serif;
         font-weight: 700;
         text-transform: uppercase;
       }
       .font-mono {
-        font-family: 'Roboto Condensed', Arial, sans-serif;
+        font-family: "Roboto Condensed", Arial, sans-serif;
       }
       /* No italics anywhere */
-      * { font-style: normal !important; }
-      ::selection { background: #E8731A; color: #ffffff; }
+      * {
+        font-style: normal !important;
+      }
+      ::selection {
+        background: #e8731a;
+        color: #ffffff;
+      }
       /* Image slot container */
       .img-slot-container {
         position: relative;
         overflow: hidden;
-        background: #0E0E18;
+        background: #0e0e18;
       }
       .img-slot-container img {
         width: 100%;
@@ -119,7 +150,9 @@
         display: block;
         transition: transform 0.5s ease;
       }
-      .img-slot-container:hover img { transform: scale(1.04); }
+      .img-slot-container:hover img {
+        transform: scale(1.04);
+      }
       .slot-fallback {
         display: none;
         position: absolute;
@@ -130,18 +163,20 @@
         justify-content: center;
         padding: 1.5rem;
         text-align: center;
-        border: 1px dashed rgba(255,255,255,0.15);
+        border: 1px dashed rgba(255, 255, 255, 0.15);
       }
-      details summary::-webkit-details-marker { display: none; }
+      details summary::-webkit-details-marker {
+        display: none;
+      }
       /* Buttons — flat, square, bold uppercase */
       .btn-primary {
         display: inline-flex;
         align-items: center;
         gap: 8px;
         padding: 13px 28px;
-        background: #E8731A;
+        background: #e8731a;
         color: #fff;
-        font-family: 'Teko', Arial, sans-serif;
+        font-family: "Teko", Arial, sans-serif;
         font-weight: 700;
         font-size: 14px;
         text-transform: uppercase;
@@ -151,7 +186,9 @@
         transition: background 0.2s;
         text-decoration: none;
       }
-      .btn-primary:hover { background: #C75F10; }
+      .btn-primary:hover {
+        background: #c75f10;
+      }
       .btn-secondary {
         display: inline-flex;
         align-items: center;
@@ -159,25 +196,30 @@
         padding: 12px 24px;
         background: transparent;
         color: #fff;
-        font-family: 'Teko', Arial, sans-serif;
+        font-family: "Teko", Arial, sans-serif;
         font-weight: 700;
         font-size: 13px;
         text-transform: uppercase;
         letter-spacing: 0.07em;
-        border: 1px solid rgba(255,255,255,0.75);
+        border: 1px solid rgba(255, 255, 255, 0.75);
         cursor: pointer;
-        transition: background 0.2s, color 0.2s;
+        transition:
+          background 0.2s,
+          color 0.2s;
         text-decoration: none;
       }
-      .btn-secondary:hover { background: #fff; color: #04040F; }
+      .btn-secondary:hover {
+        background: #fff;
+        color: #04040f;
+      }
       .btn-wa {
         display: inline-flex;
         align-items: center;
         gap: 8px;
         padding: 12px 22px;
-        background: #1FAA59;
+        background: #1faa59;
         color: #fff;
-        font-family: 'Teko', Arial, sans-serif;
+        font-family: "Teko", Arial, sans-serif;
         font-weight: 700;
         font-size: 14px;
         text-transform: uppercase;
@@ -187,14 +229,18 @@
         transition: background 0.2s;
         text-decoration: none;
       }
-      .btn-wa:hover { background: #17923d; }
+      .btn-wa:hover {
+        background: #17923d;
+      }
       /* Transparent Header bar over hero photo */
       .site-header {
         position: absolute;
-        top: 0; left: 0; right: 0;
+        top: 0;
+        left: 0;
+        right: 0;
         z-index: 50;
         background: transparent !important;
-        border-bottom: 1px solid rgba(255,255,255,0.20);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       }
       /* Big orange surfaces (offer panel, badge, header call button): coral orange #F47C48 with dark navy text */
       .btn-coral {
@@ -202,9 +248,9 @@
         align-items: center;
         gap: 8px;
         padding: 12px 20px;
-        background: #F47C48;
-        color: #04040F !important;
-        font-family: 'Teko', Arial, sans-serif;
+        background: #f47c48;
+        color: #04040f !important;
+        font-family: "Teko", Arial, sans-serif;
         font-weight: 700;
         font-size: 14px;
         text-transform: uppercase;
@@ -214,36 +260,50 @@
         transition: opacity 0.2s;
         text-decoration: none;
       }
-      .btn-coral:hover { opacity: 0.92; }
+      .btn-coral:hover {
+        opacity: 0.92;
+      }
       /* Section alternating BG */
-      .section-alt { background: #0A0A1A; }
+      .section-alt {
+        background: #0a0a1a;
+      }
       /* Facility cards — square, thin border */
       .facility-card {
-        border: 1px solid rgba(255,255,255,0.18);
+        border: 1px solid rgba(255, 255, 255, 0.18);
         background: #111118;
         display: flex;
         flex-direction: column;
         transition: border-color 0.2s;
       }
-      .facility-card:hover { border-color: rgba(232,115,26,0.55); }
+      .facility-card:hover {
+        border-color: rgba(232, 115, 26, 0.55);
+      }
       /* FAQ */
       .faq-item {
-        border: 1px solid rgba(255,255,255,0.18);
+        border: 1px solid rgba(255, 255, 255, 0.18);
         background: #111118;
         padding: 18px 22px;
         margin-bottom: 10px;
         transition: border-color 0.2s;
       }
-      .faq-item:hover { border-color: rgba(255,255,255,0.35); }
-      html { scroll-padding-top: 96px; }
-      body { overflow-x: clip; }
+      .faq-item:hover {
+        border-color: rgba(255, 255, 255, 0.35);
+      }
+      html {
+        scroll-padding-top: 96px;
+      }
+      body {
+        overflow-x: clip;
+      }
       .form-card {
         padding: 30px !important;
         background: #111118;
-        border: 1px solid rgba(255,255,255,0.20);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         position: relative;
       }
-      #enquiry-form { scroll-margin-top: 96px; }
+      #enquiry-form {
+        scroll-margin-top: 96px;
+      }
       #contactForm label {
         display: block;
         font-size: 13px !important;
@@ -257,24 +317,45 @@
         font-size: 16px !important;
         line-height: 1.4;
       }
-      #contactForm textarea { min-height: 112px; }
-      #contactForm button[type="submit"] { min-height: 54px; }
+      #contactForm textarea {
+        min-height: 112px;
+      }
+      #contactForm button[type="submit"] {
+        min-height: 54px;
+      }
       .icon-button svg,
       .btn-primary svg,
       .btn-wa svg,
       .btn-coral svg,
-      .mobile-cta-bar svg { width: 20px; height: 20px; flex: 0 0 auto; }
-      .mobile-cta-bar { padding-bottom: env(safe-area-inset-bottom); }
+      .mobile-cta-bar svg {
+        width: 20px;
+        height: 20px;
+        flex: 0 0 auto;
+      }
+      .mobile-cta-bar {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
 
       @media (max-width: 767px) {
-        html { scroll-padding-top: 80px; }
+        html {
+          scroll-padding-top: 80px;
+        }
         .site-header {
-          background: rgba(4,4,15,0.94) !important;
+          background: rgba(4, 4, 15, 0.94) !important;
           backdrop-filter: blur(12px);
         }
-        .site-header > div { min-height: 76px; padding: 4px 12px; gap: 8px; }
-        .site-header > div > a img { width: 66px !important; height: 66px !important; }
-        .mobile-header-actions { gap: 6px !important; }
+        .site-header > div {
+          min-height: 76px;
+          padding: 4px 12px;
+          gap: 8px;
+        }
+        .site-header > div > a img {
+          width: 66px !important;
+          height: 66px !important;
+        }
+        .mobile-header-actions {
+          gap: 6px !important;
+        }
         .mobile-header-actions .btn-coral,
         .mobile-header-actions .btn-wa,
         .mobile-header-actions .btn-primary {
@@ -284,9 +365,16 @@
           font-size: 12px !important;
           letter-spacing: 0.02em;
         }
-        .mobile-header-actions .icon-button { min-width: 44px; padding: 8px !important; }
-        .site-header a { white-space: nowrap; }
-        body.pb-20 { padding-bottom: calc(76px + env(safe-area-inset-bottom)) !important; }
+        .mobile-header-actions .icon-button {
+          min-width: 44px;
+          padding: 8px !important;
+        }
+        .site-header a {
+          white-space: nowrap;
+        }
+        body.pb-20 {
+          padding-bottom: calc(76px + env(safe-area-inset-bottom)) !important;
+        }
         body > section:first-of-type {
           min-height: auto;
           padding: 104px 0 38px !important;
@@ -295,7 +383,9 @@
           padding-left: 16px;
           padding-right: 16px;
         }
-        body > section:first-of-type .grid { gap: 28px; }
+        body > section:first-of-type .grid {
+          gap: 28px;
+        }
         body > section:first-of-type h1 {
           font-size: clamp(2.35rem, 11vw, 3.5rem) !important;
           line-height: 1.06 !important;
@@ -304,42 +394,86 @@
           font-size: 17px !important;
           line-height: 1.55 !important;
         }
-        body > section:first-of-type .lg\:col-span-7 > .flex.flex-wrap.items-center.gap-y-2 {
+        body
+          > section:first-of-type
+          .lg\:col-span-7
+          > .flex.flex-wrap.items-center.gap-y-2 {
           align-items: flex-start;
           font-size: 13px;
           line-height: 1.5;
         }
-        body > section:first-of-type .lg\:col-span-7 > .flex.flex-wrap.items-center.gap-y-2 > span:nth-child(2) {
+        body
+          > section:first-of-type
+          .lg\:col-span-7
+          > .flex.flex-wrap.items-center.gap-y-2
+          > span:nth-child(2) {
           display: none;
         }
-        body > section:first-of-type .lg\:col-span-7 > .flex.flex-wrap.items-center.gap-3 {
+        body
+          > section:first-of-type
+          .lg\:col-span-7
+          > .flex.flex-wrap.items-center.gap-3 {
           display: grid;
           grid-template-columns: 1fr;
         }
-        body > section:first-of-type .lg\:col-span-7 > .flex.flex-wrap.items-center.gap-3 > a {
+        body
+          > section:first-of-type
+          .lg\:col-span-7
+          > .flex.flex-wrap.items-center.gap-3
+          > a {
           width: 100%;
           min-height: 50px;
           justify-content: center;
         }
-        .form-card { padding: 22px 18px !important; }
-        .faq-item { padding: 16px; }
-        .mobile-cta-bar > a { min-height: 62px; gap: 2px; font-size: 12px; }
-        footer { padding-bottom: 12px; }
+        .form-card {
+          padding: 22px 18px !important;
+        }
+        .faq-item {
+          padding: 16px;
+        }
+        .mobile-cta-bar > a {
+          min-height: 62px;
+          gap: 2px;
+          font-size: 12px;
+        }
+        footer {
+          padding-bottom: 12px;
+        }
       }
 
       @media (max-width: 360px) {
-        .site-header > div { padding-left: 8px; padding-right: 8px; }
-        .site-header > div > a img { width: 58px !important; height: 58px !important; }
-        .mobile-header-actions { gap: 4px !important; }
+        .site-header > div {
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+        .site-header > div > a img {
+          width: 58px !important;
+          height: 58px !important;
+        }
+        .mobile-header-actions {
+          gap: 4px !important;
+        }
         .mobile-header-actions .btn-coral,
         .mobile-header-actions .btn-wa,
-        .mobile-header-actions .btn-primary { padding-left: 8px !important; padding-right: 8px !important; }
+        .mobile-header-actions .btn-primary {
+          padding-left: 8px !important;
+          padding-right: 8px !important;
+        }
       }
 
       @media (min-width: 768px) and (max-width: 1023px) {
-        .site-header > div > a img { width: 84px !important; height: 84px !important; }
-        body > section:first-of-type { min-height: auto; padding-top: 148px !important; padding-bottom: 56px !important; }
-        .form-card { padding: 28px !important; }
+        .site-header > div > a img {
+          width: 84px !important;
+          height: 84px !important;
+        }
+        body > section:first-of-type {
+          min-height: auto;
+          padding-top: 148px !important;
+          padding-bottom: 56px !important;
+        }
+        .form-card {
+          padding: 28px !important;
+        }
       }
     </style>
 
@@ -349,18 +483,27 @@
     </script>
   </head>
   <body class="bg-inkBlack text-white antialiased pb-20 md:pb-0">
-
     <!-- TOP BAR / TRANSPARENT HEADER -->
     <header class="site-header">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
-
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between"
+      >
         <!-- Gym Logo — prominent size, transparent header -->
-        <a href="/" class="flex items-center group py-1" title="Fitness Extreme International">
+        <a
+          href="/"
+          class="flex items-center group py-1"
+          title="Fitness Extreme International"
+        >
           <img
-            src="/img/Copy%20of%20fei%20-%20intl.webp"
-            onerror="this.src='/img/fei-logo-header.png'"
+            src="/img/img_2.webp"
+            onerror="this.src = '/img/fei-logo-header.png'"
             alt="Fitness Extreme International"
-            style="width: 108px; height: 108px; object-fit: contain; display: block;"
+            style="
+              width: 108px;
+              height: 108px;
+              object-fit: contain;
+              display: block;
+            "
           />
         </a>
 
@@ -383,14 +526,16 @@
             onclick="trackEvent('whatsapp_click', { placement: 'header' })"
             class="btn-wa icon-button"
           >
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"
+              />
+            </svg>
             <span>WhatsApp</span>
           </a>
 
           <!-- Primary Book Visit button in orange #E8731A -->
-          <a href="#enquiry-form" class="btn-primary">
-            Book Visit
-          </a>
+          <a href="#enquiry-form" class="btn-primary"> Book Visit </a>
         </div>
 
         <!-- Mobile Quick Actions -->
@@ -399,38 +544,59 @@
             href="tel:+917593866600"
             onclick="trackEvent('call_click', { placement: 'header_mobile' })"
             class="btn-coral"
-            style="padding: 10px 14px; font-size: 13px;"
+            style="padding: 10px 14px; font-size: 13px"
             aria-label="Call +91 75938 66600"
           >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a15 15 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A17 17 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                d="M5 4h4l2 5-2.5 1.5a15 15 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A17 17 0 0 1 4 5a1 1 0 0 1 1-1Z"
+              />
+            </svg>
             <span>Call</span>
           </a>
           <a
             href="https://wa.me/917593866600?text=Hi%20Fitness%20Extreme%20Intl%20Hyderabad%2C%20I%20want%20to%20book%20a%20visit."
             target="_blank"
             rel="noopener"
-            onclick="trackEvent('whatsapp_click', { placement: 'header_mobile' })"
+            onclick="
+              trackEvent('whatsapp_click', { placement: 'header_mobile' })
+            "
             class="btn-wa icon-button"
             aria-label="WhatsApp Fitness Extreme Intl Hyderabad"
           >
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"
+              />
+            </svg>
           </a>
-          <a href="#enquiry-form" class="btn-primary" style="padding: 10px 14px; font-size: 12px;">
+          <a
+            href="#enquiry-form"
+            class="btn-primary"
+            style="padding: 10px 14px; font-size: 12px"
+          >
             Book Visit
           </a>
         </div>
-
       </div>
     </header>
 
     <!-- SECTION 1: HERO & ABOVE-THE-FOLD LEAD CAPTURE (Transparent Header overlays this) -->
-    <section class="relative min-h-[96vh] flex items-center pt-52 pb-16 lg:pt-56 lg:pb-24 overflow-hidden" style="background:#04040F;">
-      
+    <section
+      class="relative min-h-[96vh] flex items-center pt-52 pb-16 lg:pt-56 lg:pb-24 overflow-hidden"
+      style="background: #04040f"
+    >
       <!-- Hyderabad gym hero image -->
       <div class="absolute inset-0 z-0 img-slot-container">
         <img
           id="slot-hero"
-          src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.11%20AM.webp"
+          src="/img/img_9.webp"
           data-fallback="/img/hero.jpg"
           alt="Fitness Extreme Intl gym floor and training equipment in Banjara Hills, Hyderabad"
           fetchpriority="high"
@@ -438,48 +604,102 @@
           class="w-full h-full object-cover object-center"
         />
         <div class="slot-fallback" id="fallback-img_2.jpeg">
-          <span class="font-mono text-xs uppercase text-white/70 font-semibold tracking-wider">[Gym floor]</span>
+          <span
+            class="font-mono text-xs uppercase text-white/70 font-semibold tracking-wider"
+            >[Gym floor]</span
+          >
         </div>
         <!-- Flat dark navy overlay for contrast -->
-        <div class="absolute inset-0" style="background: rgba(4,4,15,0.82);"></div>
-        <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(4,4,15,0.92) 0%, rgba(4,4,15,0.70) 60%, rgba(4,4,15,0.40) 100%);"></div>
+        <div
+          class="absolute inset-0"
+          style="background: rgba(4, 4, 15, 0.82)"
+        ></div>
+        <div
+          class="absolute inset-0"
+          style="
+            background: linear-gradient(
+              90deg,
+              rgba(4, 4, 15, 0.92) 0%,
+              rgba(4, 4, 15, 0.7) 60%,
+              rgba(4, 4, 15, 0.4) 100%
+            );
+          "
+        ></div>
       </div>
 
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center"
+        >
           <!-- Left Column: High-Impact Copy & Value Props -->
           <div class="lg:col-span-7 text-left space-y-5">
-            
             <!-- Big Coral Orange Surface: Badge with dark navy text per specs -->
             <div class="inline-flex items-center">
-              <span style="background:#F47C48; color:#04040F; padding:8px 16px; font-family:'Roboto Condensed',Arial,sans-serif; font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:0.08em; display:inline-flex; align-items:center;">
+              <span
+                style="
+                  background: #f47c48;
+                  color: #04040f;
+                  padding: 8px 16px;
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-weight: 700;
+                  font-size: 13px;
+                  text-transform: uppercase;
+                  letter-spacing: 0.08em;
+                  display: inline-flex;
+                  align-items: center;
+                "
+              >
                 <span>Day pass ₹500, adjustable towards membership</span>
               </span>
             </div>
 
             <!-- Primary H1 Headline: Oswald Bold, uppercase, NO italics -->
-            <h1 class="font-headline font-bold uppercase text-white leading-none tracking-tight"
-                style="font-size: clamp(2.4rem, 5.5vw, 4.8rem); line-height: 1.02; margin: 12px 0;">
-              Train at <span style="color:#E8731A;">Banjara Hills'</span><br/>
+            <h1
+              class="font-headline font-bold uppercase text-white leading-none tracking-tight"
+              style="
+                font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+                line-height: 1.02;
+                margin: 12px 0;
+              "
+            >
+              Train at <span style="color: #e8731a">Banjara Hills'</span><br />
               premium gym
             </h1>
 
             <!-- Branch Subheadline: Arial, 17px, white 80% opacity -->
-            <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:17px; line-height:1.65; color:rgba(255,255,255,0.82); max-width:540px;">
-              Strength, cardio, functional training and a steam room under one roof. Try a day for ₹500 and it counts towards your membership.
+            <p
+              style="
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                font-size: 17px;
+                line-height: 1.65;
+                color: rgba(255, 255, 255, 0.82);
+                max-width: 540px;
+              "
+            >
+              Strength, cardio, functional training and a steam room under one
+              roof. Try a day for ₹500 and it counts towards your membership.
             </p>
 
             <!-- Location & Hours Highlights -->
-            <div class="flex flex-wrap items-center gap-y-2 gap-x-5 text-sm" style="color:rgba(255,255,255,0.70);">
+            <div
+              class="flex flex-wrap items-center gap-y-2 gap-x-5 text-sm"
+              style="color: rgba(255, 255, 255, 0.7)"
+            >
               <span>Banjara Hills, Hyderabad</span>
               <span>•</span>
-              <span>Monday to Saturday: 5:00 AM to 11:00 PM | Sunday: 6:00 AM to 10:00 PM</span>
+              <span
+                >Monday to Saturday: 5:00 AM to 11:00 PM | Sunday: 6:00 AM to
+                10:00 PM</span
+              >
             </div>
 
             <!-- CTA Action Row: Square buttons, flat colour -->
             <div class="flex flex-wrap items-center gap-3 pt-2">
-              <a href="#enquiry-form" class="btn-primary" style="padding:14px 30px; font-size:15px;">
+              <a
+                href="#enquiry-form"
+                class="btn-primary"
+                style="padding: 14px 30px; font-size: 15px"
+              >
                 <span>Book your visit</span>
               </a>
 
@@ -489,53 +709,122 @@
                 rel="noopener"
                 onclick="trackEvent('whatsapp_click', { placement: 'hero' })"
                 class="btn-wa"
-                style="padding:13px 26px; font-size:15px;"
+                style="padding: 13px 26px; font-size: 15px"
               >
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"
+                  />
+                </svg>
                 <span>WhatsApp us</span>
               </a>
             </div>
 
             <!-- Trust Badge Line -->
-            <div class="pt-3 flex items-center gap-4 text-xs" style="color:rgba(255,255,255,0.55); border-top:1px solid rgba(255,255,255,0.18);">
-              <span style="color:rgba(255,255,255,0.85);">Fitness Extreme Intl – Hyderabad</span>
+            <div
+              class="pt-3 flex items-center gap-4 text-xs"
+              style="
+                color: rgba(255, 255, 255, 0.55);
+                border-top: 1px solid rgba(255, 255, 255, 0.18);
+              "
+            >
+              <span style="color: rgba(255, 255, 255, 0.85)"
+                >Fitness Extreme Intl – Hyderabad</span
+              >
               <span>•</span>
-              <span style="color:rgba(255,255,255,0.85);">Banjara Hills</span>
+              <span style="color: rgba(255, 255, 255, 0.85)"
+                >Banjara Hills</span
+              >
               <span>•</span>
-              <span class="font-headline font-bold uppercase tracking-wide" style="color:rgba(255,255,255,0.75);">Be fit. Be happy.</span>
+              <span
+                class="font-headline font-bold uppercase tracking-wide"
+                style="color: rgba(255, 255, 255, 0.75)"
+                >Be fit. Be happy.</span
+              >
             </div>
-
           </div>
 
           <!-- Right Column: Instant Enquiry Form (Above the fold) -->
           <div class="lg:col-span-5" id="enquiry-form">
             <div class="form-card">
-              
               <!-- Flat orange top accent line -->
-              <div style="position:absolute; top:0; left:0; right:0; height:3px; background:#E8731A;"></div>
+              <div
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  height: 3px;
+                  background: #e8731a;
+                "
+              ></div>
 
               <div class="mb-5">
                 <div class="flex items-center justify-between mb-1">
-                  <span class="font-headline font-bold text-xs uppercase tracking-widest" style="color:#E8731A;">Book your visit</span>
-                  <span style="background:rgba(232,115,26,0.15); color:#E8731A; font-size:11px; font-weight:700; padding:2px 8px; text-transform:uppercase;">Day pass ₹500</span>
+                  <span
+                    class="font-headline font-bold text-xs uppercase tracking-widest"
+                    style="color: #e8731a"
+                    >Book your visit</span
+                  >
+                  <span
+                    style="
+                      background: rgba(232, 115, 26, 0.15);
+                      color: #e8731a;
+                      font-size: 11px;
+                      font-weight: 700;
+                      padding: 2px 8px;
+                      text-transform: uppercase;
+                    "
+                    >Day pass ₹500</span
+                  >
                 </div>
-                <h3 class="font-headline font-bold uppercase text-white tracking-tight" style="font-size:1.55rem; line-height:1.15;">
+                <h3
+                  class="font-headline font-bold uppercase text-white tracking-tight"
+                  style="font-size: 1.55rem; line-height: 1.15"
+                >
                   Book your visit
                 </h3>
-                <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:12px; color:rgba(255,255,255,0.55); margin-top:4px;">
-                  Leave your number. We'll call you back, usually within a few hours.
+                <p
+                  style="
+                    font-family:
+                      &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                    font-size: 12px;
+                    color: rgba(255, 255, 255, 0.55);
+                    margin-top: 4px;
+                  "
+                >
+                  Leave your number. We'll call you back, usually within a few
+                  hours.
                 </p>
               </div>
 
               <!-- Public Form connecting to Monolithic /api/submit -->
               <form id="contactForm" class="space-y-3">
-                
                 <!-- Honeypot anti-spam (hidden) -->
-                <input type="text" name="hp_field" id="hp_field" class="hidden" tabindex="-1" autocomplete="off" />
+                <input
+                  type="text"
+                  name="hp_field"
+                  id="hp_field"
+                  class="hidden"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
 
                 <!-- Full Name -->
                 <div>
-                  <label for="name" style="display:block; font-size:11px; font-weight:700; color:rgba(255,255,255,0.70); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:3px;">Full Name <span style="color:#E8731A;">*</span></label>
+                  <label
+                    for="name"
+                    style="
+                      display: block;
+                      font-size: 11px;
+                      font-weight: 700;
+                      color: rgba(255, 255, 255, 0.7);
+                      text-transform: uppercase;
+                      letter-spacing: 0.06em;
+                      margin-bottom: 3px;
+                    "
+                    >Full Name <span style="color: #e8731a">*</span></label
+                  >
                   <div>
                     <input
                       type="text"
@@ -543,16 +832,48 @@
                       name="name"
                       required
                       placeholder="e.g. Rahul Sharma"
-                      style="width:100%; padding:9px 12px; background:#0A0A1A; border:1px solid rgba(255,255,255,0.20); color:#fff; font-size:13px; outline:none;"
+                      style="
+                        width: 100%;
+                        padding: 9px 12px;
+                        background: #0a0a1a;
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                        color: #fff;
+                        font-size: 13px;
+                        outline: none;
+                      "
                     />
                   </div>
                 </div>
 
                 <!-- 10-Digit Mobile -->
                 <div>
-                  <label for="phone" style="display:block; font-size:11px; font-weight:700; color:rgba(255,255,255,0.70); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:3px;">Mobile Number <span style="color:#E8731A;">*</span></label>
+                  <label
+                    for="phone"
+                    style="
+                      display: block;
+                      font-size: 11px;
+                      font-weight: 700;
+                      color: rgba(255, 255, 255, 0.7);
+                      text-transform: uppercase;
+                      letter-spacing: 0.06em;
+                      margin-bottom: 3px;
+                    "
+                    >Mobile Number <span style="color: #e8731a">*</span></label
+                  >
                   <div class="relative flex">
-                    <span style="display:inline-flex; align-items:center; padding:0 12px; background:rgba(10,10,26,0.85); border:1px solid rgba(255,255,255,0.20); border-right:0; font-size:12px; font-weight:700; color:rgba(255,255,255,0.55);">
+                    <span
+                      style="
+                        display: inline-flex;
+                        align-items: center;
+                        padding: 0 12px;
+                        background: rgba(10, 10, 26, 0.85);
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                        border-right: 0;
+                        font-size: 12px;
+                        font-weight: 700;
+                        color: rgba(255, 255, 255, 0.55);
+                      "
+                    >
                       +91
                     </span>
                     <input
@@ -563,13 +884,34 @@
                       pattern="[6-9][0-9]{9}"
                       maxlength="10"
                       placeholder="10-digit mobile number"
-                      style="width:100%; padding:9px 12px; background:#0A0A1A; border:1px solid rgba(255,255,255,0.20); border-left:0; color:#fff; font-size:13px; outline:none;"
+                      style="
+                        width: 100%;
+                        padding: 9px 12px;
+                        background: #0a0a1a;
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                        border-left: 0;
+                        color: #fff;
+                        font-size: 13px;
+                        outline: none;
+                      "
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label for="email" style="display:block; font-size:11px; font-weight:700; color:rgba(255,255,255,0.70); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:3px;">Email Address <span style="color:#E8731A;">*</span></label>
+                  <label
+                    for="email"
+                    style="
+                      display: block;
+                      font-size: 11px;
+                      font-weight: 700;
+                      color: rgba(255, 255, 255, 0.7);
+                      text-transform: uppercase;
+                      letter-spacing: 0.06em;
+                      margin-bottom: 3px;
+                    "
+                    >Email Address <span style="color: #e8731a">*</span></label
+                  >
                   <input
                     type="email"
                     id="email"
@@ -577,12 +919,32 @@
                     required
                     autocomplete="email"
                     placeholder="e.g. name@example.com"
-                    style="width:100%; padding:9px 12px; background:#0A0A1A; border:1px solid rgba(255,255,255,0.20); color:#fff; font-size:13px; outline:none;"
+                    style="
+                      width: 100%;
+                      padding: 9px 12px;
+                      background: #0a0a1a;
+                      border: 1px solid rgba(255, 255, 255, 0.2);
+                      color: #fff;
+                      font-size: 13px;
+                      outline: none;
+                    "
                   />
                 </div>
 
                 <div>
-                  <label for="preferred_branch" style="display:block; font-size:11px; font-weight:700; color:rgba(255,255,255,0.70); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:3px;">Branch</label>
+                  <label
+                    for="preferred_branch"
+                    style="
+                      display: block;
+                      font-size: 11px;
+                      font-weight: 700;
+                      color: rgba(255, 255, 255, 0.7);
+                      text-transform: uppercase;
+                      letter-spacing: 0.06em;
+                      margin-bottom: 3px;
+                    "
+                    >Branch</label
+                  >
                   <input
                     type="text"
                     id="preferred_branch"
@@ -590,18 +952,47 @@
                     value="Fitness Extreme Intl  Hyderabad, Banjara Hills"
                     readonly
                     aria-readonly="true"
-                    style="width:100%; padding:9px 12px; background:rgba(10,10,26,0.60); border:1px solid rgba(255,255,255,0.20); color:rgba(255,255,255,0.70); font-size:13px; cursor:not-allowed;"
+                    style="
+                      width: 100%;
+                      padding: 9px 12px;
+                      background: rgba(10, 10, 26, 0.6);
+                      border: 1px solid rgba(255, 255, 255, 0.2);
+                      color: rgba(255, 255, 255, 0.7);
+                      font-size: 13px;
+                      cursor: not-allowed;
+                    "
                   />
                 </div>
 
                 <div>
-                  <label for="message_input" style="display:block; font-size:11px; font-weight:700; color:rgba(255,255,255,0.70); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:3px;">Message</label>
+                  <label
+                    for="message_input"
+                    style="
+                      display: block;
+                      font-size: 11px;
+                      font-weight: 700;
+                      color: rgba(255, 255, 255, 0.7);
+                      text-transform: uppercase;
+                      letter-spacing: 0.06em;
+                      margin-bottom: 3px;
+                    "
+                    >Message</label
+                  >
                   <textarea
                     id="message_input"
                     name="message_input"
                     rows="3"
                     placeholder="Tell us what you'd like to know."
-                    style="width:100%; padding:8px 12px; background:#0A0A1A; border:1px solid rgba(255,255,255,0.20); color:#fff; font-size:12px; outline:none; resize:vertical;"
+                    style="
+                      width: 100%;
+                      padding: 8px 12px;
+                      background: #0a0a1a;
+                      border: 1px solid rgba(255, 255, 255, 0.2);
+                      color: #fff;
+                      font-size: 12px;
+                      outline: none;
+                      resize: vertical;
+                    "
                   ></textarea>
                 </div>
 
@@ -610,106 +1001,226 @@
                   type="submit"
                   id="submitBtn"
                   class="btn-primary w-full justify-center"
-                  style="padding: 14px; font-size: 15px; width: 100%;"
+                  style="padding: 14px; font-size: 15px; width: 100%"
                 >
                   <span id="btnText">Get my free enquiry call</span>
                 </button>
 
                 <!-- Status Feedback -->
-                <div id="formMessage" class="hidden p-3 text-xs font-semibold text-center"></div>
-
+                <div
+                  id="formMessage"
+                  class="hidden p-3 text-xs font-semibold text-center"
+                ></div>
               </form>
-
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
     <!-- SECTION 2: OPENING HOURS CARDS (Alternate Section #0A0A1A) -->
-    <section class="py-14 border-y border-white/20" style="background:#0A0A1A;">
+    <section class="py-14 border-y border-white/20" style="background: #0a0a1a">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <div class="text-center max-w-xl mx-auto mb-8">
-          <p class="font-headline font-bold text-xs uppercase tracking-widest text-brandOrange mb-1">Opening hours</p>
-          <h2 class="font-headline font-bold uppercase text-3xl sm:text-4xl text-white tracking-tight">
+          <p
+            class="font-headline font-bold text-xs uppercase tracking-widest text-brandOrange mb-1"
+          >
+            Opening hours
+          </p>
+          <h2
+            class="font-headline font-bold uppercase text-3xl sm:text-4xl text-white tracking-tight"
+          >
             Opening Hours
           </h2>
-          <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:14px; color:rgba(255,255,255,0.70); margin-top:4px;">
-            Monday to Saturday: 5:00 AM to 11:00 PM. Sunday: 6:00 AM to 10:00 PM.
+          <p
+            style="
+              font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+              font-size: 14px;
+              color: rgba(255, 255, 255, 0.7);
+              margin-top: 4px;
+            "
+          >
+            Monday to Saturday: 5:00 AM to 11:00 PM. Sunday: 6:00 AM to 10:00
+            PM.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          
           <!-- Card 1: Mon-Sat -->
-          <div style="background:#111118; border:1px solid rgba(255,255,255,0.20); padding:24px;">
+          <div
+            style="
+              background: #111118;
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              padding: 24px;
+            "
+          >
             <div>
               <div class="flex items-center gap-2">
-                <h3 class="font-headline font-bold text-xl uppercase text-white">Monday to Saturday</h3>
-                <span style="font-size:10px; font-weight:700; background:rgba(31,170,89,0.20); color:#1FAA59; padding:2px 8px; text-transform:uppercase;">6 Days / Wk</span>
+                <h3
+                  class="font-headline font-bold text-xl uppercase text-white"
+                >
+                  Monday to Saturday
+                </h3>
+                <span
+                  style="
+                    font-size: 10px;
+                    font-weight: 700;
+                    background: rgba(31, 170, 89, 0.2);
+                    color: #1faa59;
+                    padding: 2px 8px;
+                    text-transform: uppercase;
+                  "
+                  >6 Days / Wk</span
+                >
               </div>
-              <p class="font-headline font-bold text-2xl tracking-wide mt-1" style="color:#E8731A;">
+              <p
+                class="font-headline font-bold text-2xl tracking-wide mt-1"
+                style="color: #e8731a"
+              >
                 5:00 AM to 11:00 PM
               </p>
-              <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:13px; color:rgba(255,255,255,0.65); margin-top:4px;">
+              <p
+                style="
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-size: 13px;
+                  color: rgba(255, 255, 255, 0.65);
+                  margin-top: 4px;
+                "
+              >
                 Monday to Saturday
               </p>
             </div>
           </div>
 
           <!-- Card 2: Sunday -->
-          <div style="background:#111118; border:1px solid rgba(255,255,255,0.20); padding:24px;">
+          <div
+            style="
+              background: #111118;
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              padding: 24px;
+            "
+          >
             <div>
               <div class="flex items-center gap-2">
-                <h3 class="font-headline font-bold text-xl uppercase text-white">Sunday</h3>
-                <span style="font-size:10px; font-weight:700; background:rgba(244,124,72,0.20); color:#F47C48; padding:2px 8px; text-transform:uppercase;">Weekend</span>
+                <h3
+                  class="font-headline font-bold text-xl uppercase text-white"
+                >
+                  Sunday
+                </h3>
+                <span
+                  style="
+                    font-size: 10px;
+                    font-weight: 700;
+                    background: rgba(244, 124, 72, 0.2);
+                    color: #f47c48;
+                    padding: 2px 8px;
+                    text-transform: uppercase;
+                  "
+                  >Weekend</span
+                >
               </div>
-              <p class="font-headline font-bold text-2xl tracking-wide text-white mt-1">
+              <p
+                class="font-headline font-bold text-2xl tracking-wide text-white mt-1"
+              >
                 6:00 AM to 10:00 PM
               </p>
-              <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:13px; color:rgba(255,255,255,0.65); margin-top:4px;">
+              <p
+                style="
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-size: 13px;
+                  color: rgba(255, 255, 255, 0.65);
+                  margin-top: 4px;
+                "
+              >
                 Sunday
               </p>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
 
     <!-- SECTION 3: MEMBERSHIP AND OFFERS -->
-    <section class="py-16 sm:py-20" style="background:#04040F;" id="offer-panel">
+    <section
+      class="py-16 sm:py-20"
+      style="background: #04040f"
+      id="offer-panel"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <!-- Big Coral Orange Surface: Flat colour, square corners, 1px white border at 20% opacity -->
-        <div style="background:#F47C48; color:#04040F; border:1px solid rgba(255,255,255,0.20); padding:36px; position:relative;" class="sm:p-12 lg:p-14">
-
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
-            
+        <div
+          style="
+            background: #f47c48;
+            color: #04040f;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 36px;
+            position: relative;
+          "
+          class="sm:p-12 lg:p-14"
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10"
+          >
             <!-- Left: Bold Offer Messaging with Dark Navy Text -->
-            <div class="lg:col-span-7 space-y-5" style="color:#04040F;">
-              
-              <div style="display:inline-flex; align-items:center; background:#04040F; color:#F47C48; padding:6px 14px; font-family:'Roboto Condensed',Arial,sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.08em;">
+            <div class="lg:col-span-7 space-y-5" style="color: #04040f">
+              <div
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  background: #04040f;
+                  color: #f47c48;
+                  padding: 6px 14px;
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-weight: 700;
+                  font-size: 12px;
+                  text-transform: uppercase;
+                  letter-spacing: 0.08em;
+                "
+              >
                 <span>Membership and offers</span>
               </div>
 
-              <h2 class="font-headline font-bold uppercase tracking-tight leading-none"
-                  style="font-size:clamp(2.4rem, 5vw, 4.5rem); color:#04040F; line-height:1.02;">
-                1-year membership<br/>
+              <h2
+                class="font-headline font-bold uppercase tracking-tight leading-none"
+                style="
+                  font-size: clamp(2.4rem, 5vw, 4.5rem);
+                  color: #04040f;
+                  line-height: 1.02;
+                "
+              >
+                1-year membership<br />
                 <span>₹25,000</span>
               </h2>
 
-              <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:17px; line-height:1.6; color:rgba(4,4,15,0.85); max-width:540px;">
+              <p
+                style="
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-size: 17px;
+                  line-height: 1.6;
+                  color: rgba(4, 4, 15, 0.85);
+                  max-width: 540px;
+                "
+              >
                 Full access to all gym floors and facilities.
               </p>
 
               <!-- Inclusions Checkpoints -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2 text-sm" style="font-family:'Roboto Condensed',Arial,sans-serif; font-weight:600; color:#04040F;">
-                <div>Day pass: ₹500. Adjustable towards your membership if you join.</div>
-                <div>Fitness consultation: Available. Talk to a trainer about your goals before you commit.</div>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2 text-sm"
+                style="
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-weight: 600;
+                  color: #04040f;
+                "
+              >
+                <div>
+                  Day pass: ₹500. Adjustable towards your membership if you
+                  join.
+                </div>
+                <div>
+                  Fitness consultation: Available. Talk to a trainer about your
+                  goals before you commit.
+                </div>
               </div>
 
               <!-- Action buttons inside coral surface -->
@@ -717,173 +1228,400 @@
                 <!-- Split button with dark grey arrow box #2F2F36 -->
                 <a
                   href="#enquiry-form"
-                  style="background:#04040F; color:#fff; display:inline-flex; align-items:center; text-decoration:none; font-family:'Teko',Arial,sans-serif; font-weight:700; text-transform:uppercase; font-size:14px; letter-spacing:0.08em;"
+                  style="
+                    background: #04040f;
+                    color: #fff;
+                    display: inline-flex;
+                    align-items: center;
+                    text-decoration: none;
+                    font-family: &quot;Teko&quot;, Arial, sans-serif;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    letter-spacing: 0.08em;
+                  "
                 >
-                  <span style="padding:13px 24px;">Claim this offer</span>
-                  <span style="background:#2F2F36; color:#fff; padding:13px 18px; display:flex; align-items:center; justify-content:center; border-left:1px solid rgba(255,255,255,0.15);">
+                  <span style="padding: 13px 24px">Claim this offer</span>
+                  <span
+                    style="
+                      background: #2f2f36;
+                      color: #fff;
+                      padding: 13px 18px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      border-left: 1px solid rgba(255, 255, 255, 0.15);
+                    "
+                  >
                     →
                   </span>
                 </a>
 
                 <a
                   href="tel:+917593866600"
-                  style="background:transparent; color:#04040F; border:1px solid #04040F; padding:13px 22px; font-family:'Teko',Arial,sans-serif; font-weight:700; font-size:14px; text-transform:uppercase; letter-spacing:0.06em; text-decoration:none; display:inline-flex; align-items:center; gap:8px;"
+                  style="
+                    background: transparent;
+                    color: #04040f;
+                    border: 1px solid #04040f;
+                    padding: 13px 22px;
+                    font-family: &quot;Teko&quot;, Arial, sans-serif;
+                    font-weight: 700;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.06em;
+                    text-decoration: none;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                  "
                 >
                   <span>Call +91 75938 66600</span>
                 </a>
               </div>
 
               <!-- Offer Terms Required for Google Ads Compliance -->
-              <div style="border-top:1px solid rgba(4,4,15,0.25); padding-top:16px; margin-top:20px; font-family:'Roboto Condensed',Arial,sans-serif; font-size:11px; line-height:1.6; color:rgba(4,4,15,0.80);">
-                <p>Day pass fee is adjusted against membership purchase. Contact the branch for current terms.</p>
+              <div
+                style="
+                  border-top: 1px solid rgba(4, 4, 15, 0.25);
+                  padding-top: 16px;
+                  margin-top: 20px;
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-size: 11px;
+                  line-height: 1.6;
+                  color: rgba(4, 4, 15, 0.8);
+                "
+              >
+                <p>
+                  Day pass fee is adjusted against membership purchase. Contact
+                  the branch for current terms.
+                </p>
               </div>
-
             </div>
 
             <!-- Right: Slot offer.jpg (Tall portrait using img_.jpeg real gym workout photo) -->
             <div class="lg:col-span-5 flex justify-center lg:justify-end">
-              <div class="w-full max-w-sm img-slot-container relative aspect-[3/4]"
-                   style="border:1px solid rgba(4,4,15,0.30); background:#0A0A1A;">
+              <div
+                class="w-full max-w-sm img-slot-container relative aspect-[3/4]"
+                style="
+                  border: 1px solid rgba(4, 4, 15, 0.3);
+                  background: #0a0a1a;
+                "
+              >
                 <img
                   id="slot-offer"
-                  src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.20%20AM.webp"
+                  src="/img/img_20.webp"
                   data-fallback="/img/offer.jpg"
                   alt="Fitness Extreme Intl training zone in Banjara Hills, Hyderabad"
                   loading="lazy"
-                  onerror="handleSlotFallback(this, 'img_.jpeg', 'Workout Transformation')"
+                  onerror="
+                    handleSlotFallback(
+                      this,
+                      'img_.jpeg',
+                      'Workout Transformation',
+                    )
+                  "
                   class="w-full h-full object-cover"
                 />
                 <div class="slot-fallback" id="fallback-img_.jpeg">
-                  <span class="font-mono text-xs uppercase text-white/70 font-semibold tracking-wider">[Gym photo]</span>
-                  <span class="text-[11px] text-white/40 mt-1">Fitness Extreme Intl – Hyderabad</span>
+                  <span
+                    class="font-mono text-xs uppercase text-white/70 font-semibold tracking-wider"
+                    >[Gym photo]</span
+                  >
+                  <span class="text-[11px] text-white/40 mt-1"
+                    >Fitness Extreme Intl – Hyderabad</span
+                  >
                 </div>
                 <!-- Badge on photo -->
-                <div style="position:absolute; bottom:12px; left:12px; right:12px; background:#04040F; border:1px solid rgba(255,255,255,0.20); padding:10px; text-align:center;">
-                  <p class="font-headline font-bold uppercase text-white text-sm" style="color:#F47C48;">DAY PASS ₹500</p>
-                  <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:11px; color:rgba(255,255,255,0.65);">Fitness Extreme Intl – Hyderabad</p>
+                <div
+                  style="
+                    position: absolute;
+                    bottom: 12px;
+                    left: 12px;
+                    right: 12px;
+                    background: #04040f;
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    padding: 10px;
+                    text-align: center;
+                  "
+                >
+                  <p
+                    class="font-headline font-bold uppercase text-white text-sm"
+                    style="color: #f47c48"
+                  >
+                    DAY PASS ₹500
+                  </p>
+                  <p
+                    style="
+                      font-family:
+                        &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                      font-size: 11px;
+                      color: rgba(255, 255, 255, 0.65);
+                    "
+                  >
+                    Fitness Extreme Intl – Hyderabad
+                  </p>
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
 
     <!-- SECTION 4: HOW IT WORKS (3 SIMPLE STEPS - Alternate Section #0A0A1A) -->
-    <section class="py-16 sm:py-20 border-b border-white/20" style="background:#0A0A1A;">
+    <section
+      class="py-16 sm:py-20 border-b border-white/20"
+      style="background: #0a0a1a"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <p class="font-headline font-bold text-xs uppercase tracking-widest text-brandOrange mb-1">How it works</p>
-          <h2 class="font-headline font-bold uppercase text-3xl sm:text-5xl text-white tracking-tight">
+          <p
+            class="font-headline font-bold text-xs uppercase tracking-widest text-brandOrange mb-1"
+          >
+            How it works
+          </p>
+          <h2
+            class="font-headline font-bold uppercase text-3xl sm:text-5xl text-white tracking-tight"
+          >
             How it works
           </h2>
-          <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:15px; color:rgba(255,255,255,0.70); margin-top:8px;">
-            Send your details. Takes under a minute. Name and mobile number are enough.
+          <p
+            style="
+              font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+              font-size: 15px;
+              color: rgba(255, 255, 255, 0.7);
+              margin-top: 8px;
+            "
+          >
+            Send your details. Takes under a minute. Name and mobile number are
+            enough.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
-          
           <!-- Step 1 -->
-          <div style="background:#111118; border:1px solid rgba(255,255,255,0.20); padding:30px;">
-            <div style="width:48px; height:48px; background:#2F2F36; color:#fff; font-family:'Roboto Condensed',Arial,sans-serif; font-weight:700; font-size:20px; display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+          <div
+            style="
+              background: #111118;
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              padding: 30px;
+            "
+          >
+            <div
+              style="
+                width: 48px;
+                height: 48px;
+                background: #2f2f36;
+                color: #fff;
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                font-weight: 700;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+              "
+            >
               01
             </div>
-            <h3 class="font-headline font-bold uppercase text-2xl text-white mb-2 tracking-wide">
+            <h3
+              class="font-headline font-bold uppercase text-2xl text-white mb-2 tracking-wide"
+            >
               Send your details
             </h3>
-            <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.75);">
+            <p
+              style="
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+                color: rgba(255, 255, 255, 0.75);
+              "
+            >
               Takes under a minute. Name and mobile number are enough.
             </p>
           </div>
 
           <!-- Step 2 -->
-          <div style="background:#111118; border:1px solid rgba(255,255,255,0.20); padding:30px;">
-            <div style="width:48px; height:48px; background:#2F2F36; color:#fff; font-family:'Roboto Condensed',Arial,sans-serif; font-weight:700; font-size:20px; display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+          <div
+            style="
+              background: #111118;
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              padding: 30px;
+            "
+          >
+            <div
+              style="
+                width: 48px;
+                height: 48px;
+                background: #2f2f36;
+                color: #fff;
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                font-weight: 700;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+              "
+            >
               02
             </div>
-            <h3 class="font-headline font-bold uppercase text-2xl text-white mb-2 tracking-wide">
+            <h3
+              class="font-headline font-bold uppercase text-2xl text-white mb-2 tracking-wide"
+            >
               We call you back
             </h3>
-            <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.75);">
+            <p
+              style="
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+                color: rgba(255, 255, 255, 0.75);
+              "
+            >
               A team member answers your questions and books your visit.
             </p>
           </div>
 
           <!-- Step 3 -->
-          <div style="background:#111118; border:1px solid rgba(255,255,255,0.20); padding:30px;">
-            <div style="width:48px; height:48px; background:#E8731A; color:#fff; font-family:'Roboto Condensed',Arial,sans-serif; font-weight:700; font-size:20px; display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+          <div
+            style="
+              background: #111118;
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              padding: 30px;
+            "
+          >
+            <div
+              style="
+                width: 48px;
+                height: 48px;
+                background: #e8731a;
+                color: #fff;
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                font-weight: 700;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+              "
+            >
               03
             </div>
-            <h3 class="font-headline font-bold uppercase text-2xl text-white mb-2 tracking-wide">
+            <h3
+              class="font-headline font-bold uppercase text-2xl text-white mb-2 tracking-wide"
+            >
               Visit and train
             </h3>
-            <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.75);">
+            <p
+              style="
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+                color: rgba(255, 255, 255, 0.75);
+              "
+            >
               See the gym, meet the trainers and start when you're ready.
             </p>
           </div>
-
         </div>
 
         <div class="mt-12 text-center">
-          <a
-            href="#enquiry-form"
-            class="btn-secondary"
-            style="font-size:13px;"
-          >
+          <a href="#enquiry-form" class="btn-secondary" style="font-size: 13px">
             <span>Book your visit</span>
           </a>
         </div>
-
       </div>
     </section>
 
     <!-- SECTION 5: FACILITIES PHOTO-LED MOSAIC (Background #04040F) -->
-    <section class="py-16 sm:py-24" style="background:#04040F;" id="facilities">
+    <section class="py-16 sm:py-24" style="background: #04040f" id="facilities">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4"
+        >
           <div>
-            <p class="font-headline font-bold text-xs uppercase tracking-widest text-brandOrange mb-1">What you get at Banjara Hills</p>
-            <h2 class="font-headline font-bold uppercase text-3xl sm:text-5xl text-white tracking-tight">
+            <p
+              class="font-headline font-bold text-xs uppercase tracking-widest text-brandOrange mb-1"
+            >
+              What you get at Banjara Hills
+            </p>
+            <h2
+              class="font-headline font-bold uppercase text-3xl sm:text-5xl text-white tracking-tight"
+            >
               What you get at Banjara Hills
             </h2>
           </div>
-          <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:15px; color:rgba(255,255,255,0.70); max-width:440px;">
-            Strength, cardio, functional training, Visbody 3D body scanner, steam and shower, personal training.
+          <p
+            style="
+              font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+              font-size: 15px;
+              color: rgba(255, 255, 255, 0.7);
+              max-width: 440px;
+            "
+          >
+            Strength, cardio, functional training, Visbody 3D body scanner,
+            steam and shower, personal training.
           </p>
         </div>
 
         <!-- 6 Facilities Mosaic with square cards and thin borders -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
           <!-- Facility 1: Strength Zone (img_11.jpeg) -->
           <div class="facility-card">
             <div class="aspect-[16/10] w-full img-slot-container relative">
               <img
                 id="slot-strength"
-                src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.13%20AM.webp"
+                src="/img/img_13.webp"
                 data-fallback="/img/strength.jpg"
                 alt="                Strength zone at Fitness Extreme Intl  Hyderabad"
                 loading="lazy"
-                onerror="handleSlotFallback(this, 'img_11.jpeg', 'Strength Zone')"
+                onerror="
+                  handleSlotFallback(this, 'img_11.jpeg', 'Strength Zone')
+                "
                 class="w-full h-full object-cover"
               />
               <div class="slot-fallback" id="fallback-img_11.jpeg">
-                <span class="font-mono text-xs uppercase text-white/70 font-semibold">[Strength Zone]</span>
+                <span
+                  class="font-mono text-xs uppercase text-white/70 font-semibold"
+                  >[Strength Zone]</span
+                >
               </div>
-              <span style="position:absolute; top:10px; left:10px; background:#E8731A; color:#fff; font-family:'Roboto Condensed',Arial,sans-serif; font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; padding:3px 8px;">
+              <span
+                style="
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
+                  background: #e8731a;
+                  color: #fff;
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-weight: 700;
+                  font-size: 11px;
+                  text-transform: uppercase;
+                  letter-spacing: 0.08em;
+                  padding: 3px 8px;
+                "
+              >
                 Strength
               </span>
             </div>
             <div class="p-5 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="font-headline font-bold uppercase text-2xl text-white tracking-wide">Strength Zone</h3>
-                <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:13px; line-height:1.6; color:rgba(255,255,255,0.75); margin-top:6px;">
+                <h3
+                  class="font-headline font-bold uppercase text-2xl text-white tracking-wide"
+                >
+                  Strength Zone
+                </h3>
+                <p
+                  style="
+                    font-family:
+                      &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                    font-size: 13px;
+                    line-height: 1.6;
+                    color: rgba(255, 255, 255, 0.75);
+                    margin-top: 6px;
+                  "
+                >
                   Racks, benches and free weights for serious strength work.
                 </p>
               </div>
@@ -895,24 +1633,56 @@
             <div class="aspect-[16/10] w-full img-slot-container relative">
               <img
                 id="slot-cardio"
-                src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.11%20AM%20%282%29.webp"
+                src="/img/img_5.webp"
                 data-fallback="/img/cardio.jpg"
                 alt="                Cardio zone at Fitness Extreme Intl  Hyderabad"
                 loading="lazy"
-                onerror="handleSlotFallback(this, 'img_4.jpeg', 'Cardio Theater')"
+                onerror="
+                  handleSlotFallback(this, 'img_4.jpeg', 'Cardio Theater')
+                "
                 class="w-full h-full object-cover"
               />
               <div class="slot-fallback" id="fallback-img_4.jpeg">
-                <span class="font-mono text-xs uppercase text-white/70 font-semibold">[Cardio Theater]</span>
+                <span
+                  class="font-mono text-xs uppercase text-white/70 font-semibold"
+                  >[Cardio Theater]</span
+                >
               </div>
-              <span style="position:absolute; top:10px; left:10px; background:#E8731A; color:#fff; font-family:'Roboto Condensed',Arial,sans-serif; font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; padding:3px 8px;">
+              <span
+                style="
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
+                  background: #e8731a;
+                  color: #fff;
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-weight: 700;
+                  font-size: 11px;
+                  text-transform: uppercase;
+                  letter-spacing: 0.08em;
+                  padding: 3px 8px;
+                "
+              >
                 Cardio
               </span>
             </div>
             <div class="p-5 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="font-headline font-bold uppercase text-2xl text-white tracking-wide">Cardio Theater</h3>
-                <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:13px; line-height:1.6; color:rgba(255,255,255,0.75); margin-top:6px;">
+                <h3
+                  class="font-headline font-bold uppercase text-2xl text-white tracking-wide"
+                >
+                  Cardio Theater
+                </h3>
+                <p
+                  style="
+                    font-family:
+                      &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                    font-size: 13px;
+                    line-height: 1.6;
+                    color: rgba(255, 255, 255, 0.75);
+                    margin-top: 6px;
+                  "
+                >
                   Treadmills, bikes and cross-trainers for stamina and fat loss.
                 </p>
               </div>
@@ -924,24 +1694,56 @@
             <div class="aspect-[16/10] w-full img-slot-container relative">
               <img
                 id="slot-yoga"
-                src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.12%20AM%20%282%29.webp"
+                src="/img/img_11.webp"
                 data-fallback="/img/yoga.jpg"
                 alt="Functional training at Fitness Extreme Intl  Hyderabad"
                 loading="lazy"
-                onerror="handleSlotFallback(this, 'img_10.jpeg', 'Functional training')"
+                onerror="
+                  handleSlotFallback(this, 'img_10.jpeg', 'Functional training')
+                "
                 class="w-full h-full object-cover"
               />
               <div class="slot-fallback" id="fallback-img_10.jpeg">
-                <span class="font-mono text-xs uppercase text-white/70 font-semibold">[Functional training]</span>
+                <span
+                  class="font-mono text-xs uppercase text-white/70 font-semibold"
+                  >[Functional training]</span
+                >
               </div>
-              <span style="position:absolute; top:10px; left:10px; background:#E8731A; color:#fff; font-family:'Roboto Condensed',Arial,sans-serif; font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; padding:3px 8px;">
+              <span
+                style="
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
+                  background: #e8731a;
+                  color: #fff;
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-weight: 700;
+                  font-size: 11px;
+                  text-transform: uppercase;
+                  letter-spacing: 0.08em;
+                  padding: 3px 8px;
+                "
+              >
                 Functional training
               </span>
             </div>
             <div class="p-5 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="font-headline font-bold uppercase text-2xl text-white tracking-wide">Functional training</h3>
-                <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:13px; line-height:1.6; color:rgba(255,255,255,0.75); margin-top:6px;">
+                <h3
+                  class="font-headline font-bold uppercase text-2xl text-white tracking-wide"
+                >
+                  Functional training
+                </h3>
+                <p
+                  style="
+                    font-family:
+                      &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                    font-size: 13px;
+                    line-height: 1.6;
+                    color: rgba(255, 255, 255, 0.75);
+                    margin-top: 6px;
+                  "
+                >
                   Open space for mobility, conditioning and full-body training.
                 </p>
               </div>
@@ -953,24 +1755,60 @@
             <div class="aspect-[16/10] w-full img-slot-container relative">
               <img
                 id="slot-pilates"
-                src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.13%20AM%20%281%29.webp"
+                src="/img/img_1.webp"
                 data-fallback="/img/pilates.jpg"
                 alt="Visbody 3D body scanner at Fitness Extreme Intl  Hyderabad"
                 loading="lazy"
-                onerror="handleSlotFallback(this, 'img_12.jpeg', 'Visbody 3D body scanner')"
+                onerror="
+                  handleSlotFallback(
+                    this,
+                    'img_12.jpeg',
+                    'Visbody 3D body scanner',
+                  )
+                "
                 class="w-full h-full object-cover"
               />
               <div class="slot-fallback" id="fallback-img_12.jpeg">
-                <span class="font-mono text-xs uppercase text-white/70 font-semibold">[Visbody 3D body scanner]</span>
+                <span
+                  class="font-mono text-xs uppercase text-white/70 font-semibold"
+                  >[Visbody 3D body scanner]</span
+                >
               </div>
-              <span style="position:absolute; top:10px; left:10px; background:#E8731A; color:#fff; font-family:'Roboto Condensed',Arial,sans-serif; font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; padding:3px 8px;">
+              <span
+                style="
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
+                  background: #e8731a;
+                  color: #fff;
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-weight: 700;
+                  font-size: 11px;
+                  text-transform: uppercase;
+                  letter-spacing: 0.08em;
+                  padding: 3px 8px;
+                "
+              >
                 Visbody 3D body scanner
               </span>
             </div>
             <div class="p-5 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="font-headline font-bold uppercase text-2xl text-white tracking-wide">Visbody 3D body scanner</h3>
-                <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:13px; line-height:1.6; color:rgba(255,255,255,0.75); margin-top:6px;">
+                <h3
+                  class="font-headline font-bold uppercase text-2xl text-white tracking-wide"
+                >
+                  Visbody 3D body scanner
+                </h3>
+                <p
+                  style="
+                    font-family:
+                      &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                    font-size: 13px;
+                    line-height: 1.6;
+                    color: rgba(255, 255, 255, 0.75);
+                    margin-top: 6px;
+                  "
+                >
                   Track your body composition and see your progress in numbers.
                 </p>
               </div>
@@ -982,24 +1820,56 @@
             <div class="aspect-[16/10] w-full img-slot-container relative">
               <img
                 id="slot-zumba"
-                src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.16%20AM.webp"
+                src="/img/img_14.webp"
                 data-fallback="/img/zumba.jpg"
                 alt="Steam and shower at Fitness Extreme Intl  Hyderabad"
                 loading="lazy"
-                onerror="handleSlotFallback(this, 'img_14.jpeg', 'Steam and shower')"
+                onerror="
+                  handleSlotFallback(this, 'img_14.jpeg', 'Steam and shower')
+                "
                 class="w-full h-full object-cover"
               />
               <div class="slot-fallback" id="fallback-img_14.jpeg">
-                <span class="font-mono text-xs uppercase text-white/70 font-semibold">[Steam and shower]</span>
+                <span
+                  class="font-mono text-xs uppercase text-white/70 font-semibold"
+                  >[Steam and shower]</span
+                >
               </div>
-              <span style="position:absolute; top:10px; left:10px; background:#E8731A; color:#fff; font-family:'Roboto Condensed',Arial,sans-serif; font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; padding:3px 8px;">
+              <span
+                style="
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
+                  background: #e8731a;
+                  color: #fff;
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-weight: 700;
+                  font-size: 11px;
+                  text-transform: uppercase;
+                  letter-spacing: 0.08em;
+                  padding: 3px 8px;
+                "
+              >
                 Steam and shower
               </span>
             </div>
             <div class="p-5 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="font-headline font-bold uppercase text-2xl text-white tracking-wide">Steam and shower</h3>
-                <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:13px; line-height:1.6; color:rgba(255,255,255,0.75); margin-top:6px;">
+                <h3
+                  class="font-headline font-bold uppercase text-2xl text-white tracking-wide"
+                >
+                  Steam and shower
+                </h3>
+                <p
+                  style="
+                    font-family:
+                      &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                    font-size: 13px;
+                    line-height: 1.6;
+                    color: rgba(255, 255, 255, 0.75);
+                    margin-top: 6px;
+                  "
+                >
                   Recover and freshen up on site after your session.
                 </p>
               </div>
@@ -1011,61 +1881,104 @@
             <div class="aspect-[16/10] w-full img-slot-container relative">
               <img
                 id="slot-functional"
-                src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.11%20AM%20%284%29.webp"
+                src="/img/img_7.webp"
                 data-fallback="/img/functional.jpg"
                 alt="Personal training at Fitness Extreme Intl  Hyderabad"
                 loading="lazy"
-                onerror="handleSlotFallback(this, 'img_6.jpeg', 'Personal training')"
+                onerror="
+                  handleSlotFallback(this, 'img_6.jpeg', 'Personal training')
+                "
                 class="w-full h-full object-cover"
               />
               <div class="slot-fallback" id="fallback-img_6.jpeg">
-                <span class="font-mono text-xs uppercase text-white/70 font-semibold">[Personal training]</span>
+                <span
+                  class="font-mono text-xs uppercase text-white/70 font-semibold"
+                  >[Personal training]</span
+                >
               </div>
-              <span style="position:absolute; top:10px; left:10px; background:#E8731A; color:#fff; font-family:'Roboto Condensed',Arial,sans-serif; font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; padding:3px 8px;">
+              <span
+                style="
+                  position: absolute;
+                  top: 10px;
+                  left: 10px;
+                  background: #e8731a;
+                  color: #fff;
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-weight: 700;
+                  font-size: 11px;
+                  text-transform: uppercase;
+                  letter-spacing: 0.08em;
+                  padding: 3px 8px;
+                "
+              >
                 Personal training
               </span>
             </div>
             <div class="p-5 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="font-headline font-bold uppercase text-2xl text-white tracking-wide">Personal training</h3>
-                <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:13px; line-height:1.6; color:rgba(255,255,255,0.75); margin-top:6px;">
+                <h3
+                  class="font-headline font-bold uppercase text-2xl text-white tracking-wide"
+                >
+                  Personal training
+                </h3>
+                <p
+                  style="
+                    font-family:
+                      &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                    font-size: 13px;
+                    line-height: 1.6;
+                    color: rgba(255, 255, 255, 0.75);
+                    margin-top: 6px;
+                  "
+                >
                   One-to-one coaching built around your goal and schedule.
                 </p>
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
 
     <!-- SECTION 6: FULL-WIDTH 4-PHOTO STRIP (EDGE TO EDGE, 20px rounded photos per specs) -->
-    <section class="py-4 overflow-hidden" style="background:#04040F;" id="photo-strip">
+    <section
+      class="py-4 overflow-hidden"
+      style="background: #04040f"
+      id="photo-strip"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-          
           <!-- Strip 1: Real Gym Equipment (img_7.jpeg) -->
-          <div class="aspect-[4/3] img-slot-container relative group photo-rounded" style="border:1px solid rgba(255,255,255,0.20);">
+          <div
+            class="aspect-[4/3] img-slot-container relative group photo-rounded"
+            style="border: 1px solid rgba(255, 255, 255, 0.2)"
+          >
             <img
               id="slot-strip-1"
-              src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.11%20AM%20%285%29.webp"
+              src="/img/img_8.webp"
               data-fallback="/img/strip-1.jpg"
               alt="Fitness Extreme Intl  Hyderabad gym equipment"
               loading="lazy"
-              onerror="handleSlotFallback(this, 'img_7.jpeg', 'Equipment Close-up')"
+              onerror="
+                handleSlotFallback(this, 'img_7.jpeg', 'Equipment Close-up')
+              "
               class="w-full h-full object-cover group-hover:scale-105 transition duration-500 photo-rounded"
             />
             <div class="slot-fallback" id="fallback-img_7.jpeg">
-              <span class="font-mono text-[11px] uppercase text-white/70">[Equipment Detail]</span>
+              <span class="font-mono text-[11px] uppercase text-white/70"
+                >[Equipment Detail]</span
+              >
             </div>
           </div>
 
           <!-- Strip 2: Real Wide Gym Floor (img_8.jpeg) -->
-          <div class="aspect-[4/3] img-slot-container relative group photo-rounded" style="border:1px solid rgba(255,255,255,0.20);">
+          <div
+            class="aspect-[4/3] img-slot-container relative group photo-rounded"
+            style="border: 1px solid rgba(255, 255, 255, 0.2)"
+          >
             <img
               id="slot-strip-2"
-              src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.12%20AM.webp"
+              src="/img/img_12.webp"
               data-fallback="/img/strip-2.jpg"
               alt="Fitness Extreme Intl  Hyderabad training floor"
               loading="lazy"
@@ -1073,31 +1986,43 @@
               class="w-full h-full object-cover group-hover:scale-105 transition duration-500 photo-rounded"
             />
             <div class="slot-fallback" id="fallback-img_8.jpeg">
-              <span class="font-mono text-[11px] uppercase text-white/70">[Floor View]</span>
+              <span class="font-mono text-[11px] uppercase text-white/70"
+                >[Floor View]</span
+              >
             </div>
           </div>
 
           <!-- Strip 3: Workout Zone (img_9.jpeg) -->
-          <div class="aspect-[4/3] img-slot-container relative group photo-rounded" style="border:1px solid rgba(255,255,255,0.20);">
+          <div
+            class="aspect-[4/3] img-slot-container relative group photo-rounded"
+            style="border: 1px solid rgba(255, 255, 255, 0.2)"
+          >
             <img
               id="slot-strip-3"
-              src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.12%20AM%20%281%29.webp"
+              src="/img/img_10.webp"
               data-fallback="/img/strip-3.jpg"
               alt="Workout session at Fitness Extreme Intl  Hyderabad"
               loading="lazy"
-              onerror="handleSlotFallback(this, 'img_9.jpeg', 'Action Training')"
+              onerror="
+                handleSlotFallback(this, 'img_9.jpeg', 'Action Training')
+              "
               class="w-full h-full object-cover group-hover:scale-105 transition duration-500 photo-rounded"
             />
             <div class="slot-fallback" id="fallback-img_9.jpeg">
-              <span class="font-mono text-[11px] uppercase text-white/70">[Action Training]</span>
+              <span class="font-mono text-[11px] uppercase text-white/70"
+                >[Action Training]</span
+              >
             </div>
           </div>
 
           <!-- Strip 4: Training Section (img_13.jpeg) -->
-          <div class="aspect-[4/3] img-slot-container relative group photo-rounded" style="border:1px solid rgba(255,255,255,0.20);">
+          <div
+            class="aspect-[4/3] img-slot-container relative group photo-rounded"
+            style="border: 1px solid rgba(255, 255, 255, 0.2)"
+          >
             <img
               id="slot-strip-4"
-              src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.13%20AM%20%282%29.webp"
+              src="/img/img_13.webp"
               data-fallback="/img/strip-4.jpg"
               alt="Fitness Extreme Intl  Hyderabad gym interior"
               loading="lazy"
@@ -1105,126 +2030,203 @@
               class="w-full h-full object-cover group-hover:scale-105 transition duration-500 photo-rounded"
             />
             <div class="slot-fallback" id="fallback-img_13.jpeg">
-              <span class="font-mono text-[11px] uppercase text-white/70">[Atmosphere]</span>
+              <span class="font-mono text-[11px] uppercase text-white/70"
+                >[Atmosphere]</span
+              >
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
     <!-- SECTION 7: ADDITIONAL GYM WORK AREAS (Alternate Section #0A0A1A, 20px rounded gallery photos) -->
-    <section class="py-16 sm:py-20 border-y border-white/20" style="background:#0A0A1A;">
+    <section
+      class="py-16 sm:py-20 border-y border-white/20"
+      style="background: #0a0a1a"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-10">
-          <span class="font-headline font-bold text-xs uppercase tracking-widest text-brandOrange">Fitness Extreme Intl  Hyderabad</span>
-          <h2 class="font-headline font-bold uppercase text-3xl sm:text-4xl text-white tracking-tight mt-1">
+          <span
+            class="font-headline font-bold text-xs uppercase tracking-widest text-brandOrange"
+            >Fitness Extreme Intl Hyderabad</span
+          >
+          <h2
+            class="font-headline font-bold uppercase text-3xl sm:text-4xl text-white tracking-tight mt-1"
+          >
             Banjara Hills gym
           </h2>
-          <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:14px; color:rgba(255,255,255,0.70); margin-top:4px;">
+          <p
+            style="
+              font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+              font-size: 14px;
+              color: rgba(255, 255, 255, 0.7);
+              margin-top: 4px;
+            "
+          >
             Strength, cardio and functional training.
           </p>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          
-          <div class="photo-rounded overflow-hidden img-slot-container aspect-[3/4] relative group" style="border:1px solid rgba(255,255,255,0.20);">
+          <div
+            class="photo-rounded overflow-hidden img-slot-container aspect-[3/4] relative group"
+            style="border: 1px solid rgba(255, 255, 255, 0.2)"
+          >
             <img
-              src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.10%20AM.webp"
+              src="/img/img_3.webp"
               alt="Gym training area at Fitness Extreme Intl  Hyderabad"
               loading="lazy"
               class="w-full h-full object-cover group-hover:scale-105 transition duration-500 photo-rounded"
             />
-            <div class="absolute bottom-2.5 left-2.5 right-2.5 bg-black/80 px-2.5 py-1.5 text-[11px] font-headline font-bold uppercase text-white text-center">
+            <div
+              class="absolute bottom-2.5 left-2.5 right-2.5 bg-black/80 px-2.5 py-1.5 text-[11px] font-headline font-bold uppercase text-white text-center"
+            >
               Strength zone
             </div>
           </div>
 
-          <div class="photo-rounded overflow-hidden img-slot-container aspect-[3/4] relative group" style="border:1px solid rgba(255,255,255,0.20);">
+          <div
+            class="photo-rounded overflow-hidden img-slot-container aspect-[3/4] relative group"
+            style="border: 1px solid rgba(255, 255, 255, 0.2)"
+          >
             <img
-              src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.11%20AM%20%281%29.webp"
+              src="/img/img_4.webp"
               alt="Gym training area at Fitness Extreme Intl  Hyderabad"
               loading="lazy"
               class="w-full h-full object-cover group-hover:scale-105 transition duration-500 photo-rounded"
             />
-            <div class="absolute bottom-2.5 left-2.5 right-2.5 bg-black/80 px-2.5 py-1.5 text-[11px] font-headline font-bold uppercase text-white text-center">
+            <div
+              class="absolute bottom-2.5 left-2.5 right-2.5 bg-black/80 px-2.5 py-1.5 text-[11px] font-headline font-bold uppercase text-white text-center"
+            >
               Cardio zone
             </div>
           </div>
 
-          <div class="photo-rounded overflow-hidden img-slot-container aspect-[3/4] relative group" style="border:1px solid rgba(255,255,255,0.20);">
+          <div
+            class="photo-rounded overflow-hidden img-slot-container aspect-[3/4] relative group"
+            style="border: 1px solid rgba(255, 255, 255, 0.2)"
+          >
             <img
-              src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.11%20AM%20%283%29.webp"
+              src="/img/img_6.webp"
               alt="Gym training area at Fitness Extreme Intl  Hyderabad"
               loading="lazy"
               class="w-full h-full object-cover group-hover:scale-105 transition duration-500 photo-rounded"
             />
-            <div class="absolute bottom-2.5 left-2.5 right-2.5 bg-black/80 px-2.5 py-1.5 text-[11px] font-headline font-bold uppercase text-white text-center">
+            <div
+              class="absolute bottom-2.5 left-2.5 right-2.5 bg-black/80 px-2.5 py-1.5 text-[11px] font-headline font-bold uppercase text-white text-center"
+            >
               Functional training
             </div>
           </div>
 
-          <div class="photo-rounded overflow-hidden img-slot-container aspect-[3/4] relative group" style="border:1px solid rgba(255,255,255,0.20);">
+          <div
+            class="photo-rounded overflow-hidden img-slot-container aspect-[3/4] relative group"
+            style="border: 1px solid rgba(255, 255, 255, 0.2)"
+          >
             <img
-              src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.20%20AM%20%281%29.webp"
+              src="/img/img_15.webp"
               alt="Gym training area at Fitness Extreme Intl  Hyderabad"
               loading="lazy"
               class="w-full h-full object-cover group-hover:scale-105 transition duration-500 photo-rounded"
             />
-            <div class="absolute bottom-2.5 left-2.5 right-2.5 bg-black/80 px-2.5 py-1.5 text-[11px] font-headline font-bold uppercase text-white text-center">
-              Fitness Extreme Intl  Hyderabad
+            <div
+              class="absolute bottom-2.5 left-2.5 right-2.5 bg-black/80 px-2.5 py-1.5 text-[11px] font-headline font-bold uppercase text-white text-center"
+            >
+              Fitness Extreme Intl Hyderabad
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
     <!-- SECTION 8: PERSONAL TRAINING BLOCK (Background #04040F) -->
-    <section class="py-16 sm:py-20 border-b border-white/20" style="background:#04040F;" id="personal-training">
+    <section
+      class="py-16 sm:py-20 border-b border-white/20"
+      style="background: #04040f"
+      id="personal-training"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div style="background:#111118; border:1px solid rgba(255,255,255,0.20); overflow:hidden;">
+        <div
+          style="
+            background: #111118;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+          "
+        >
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
             <!-- Trainer Photo (img_20.jpeg real photo) -->
-            <div class="lg:col-span-5 h-72 sm:h-96 lg:h-full min-h-[340px] img-slot-container relative">
+            <div
+              class="lg:col-span-5 h-72 sm:h-96 lg:h-full min-h-[340px] img-slot-container relative"
+            >
               <img
                 id="slot-trainer"
-                src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.20%20AM%20%282%29.webp"
+                src="/img/img_16.webp"
                 data-fallback="/img/trainer.jpg"
                 alt="Fitness Extreme International certified personal trainer coaching a client"
                 loading="lazy"
-                onerror="handleSlotFallback(this, 'img_20.jpeg', 'Trainer Coaching')"
+                onerror="
+                  handleSlotFallback(this, 'img_20.jpeg', 'Trainer Coaching')
+                "
                 class="w-full h-full object-cover"
               />
               <div class="slot-fallback" id="fallback-img_20.jpeg">
-                <span class="font-mono text-xs uppercase text-white/70 font-semibold">[Personal Trainer]</span>
+                <span
+                  class="font-mono text-xs uppercase text-white/70 font-semibold"
+                  >[Personal Trainer]</span
+                >
               </div>
             </div>
 
             <!-- Copy & CTA -->
             <div class="lg:col-span-7 p-6 sm:p-10 lg:py-12 space-y-4">
-              <span style="background:rgba(232,115,26,0.18); color:#E8731A; border:1px solid rgba(232,115,26,0.35); padding:4px 12px; font-family:'Roboto Condensed',Arial,sans-serif; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; display:inline-block;">
+              <span
+                style="
+                  background: rgba(232, 115, 26, 0.18);
+                  color: #e8731a;
+                  border: 1px solid rgba(232, 115, 26, 0.35);
+                  padding: 4px 12px;
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-weight: 700;
+                  font-size: 12px;
+                  text-transform: uppercase;
+                  letter-spacing: 0.08em;
+                  display: inline-block;
+                "
+              >
                 Personal training
               </span>
 
-              <h2 class="font-headline font-bold uppercase text-3xl sm:text-5xl text-white tracking-tight">
+              <h2
+                class="font-headline font-bold uppercase text-3xl sm:text-5xl text-white tracking-tight"
+              >
                 Personal training that fits your goal
               </h2>
 
-              <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:15px; line-height:1.65; color:rgba(255,255,255,0.78);">
-                Get a plan, form coaching and accountability from our trainers. Book a consultation to see which programme suits you.
+              <p
+                style="
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  font-size: 15px;
+                  line-height: 1.65;
+                  color: rgba(255, 255, 255, 0.78);
+                "
+              >
+                Get a plan, form coaching and accountability from our trainers.
+                Book a consultation to see which programme suits you.
               </p>
 
-              <div class="space-y-2 text-sm pt-1" style="font-family:'Roboto Condensed',Arial,sans-serif; color:rgba(255,255,255,0.75);">
-              </div>
+              <div
+                class="space-y-2 text-sm pt-1"
+                style="
+                  font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                  color: rgba(255, 255, 255, 0.75);
+                "
+              ></div>
 
               <div class="pt-4 flex flex-wrap items-center gap-3">
                 <a
                   href="#enquiry-form"
                   class="btn-primary"
-                  style="padding:13px 26px;"
+                  style="padding: 13px 26px"
                 >
                   <span>Ask about training</span>
                 </a>
@@ -1234,163 +2236,367 @@
                   target="_blank"
                   rel="noopener"
                   class="btn-wa"
-                  style="padding:12px 22px;"
+                  style="padding: 12px 22px"
                 >
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"/></svg>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"
+                    />
+                  </svg>
                   <span>WhatsApp us</span>
                 </a>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- SECTION 9: FAQ (PLAIN HTML DETAILS / SUMMARY - GOOGLE ADS COMPLIANT) -->
-    <section class="py-16 sm:py-20" style="background:#04040F;" id="faq">
+    <section class="py-16 sm:py-20" style="background: #04040f" id="faq">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <div class="text-center mb-12">
-          <p class="font-headline font-bold text-xs uppercase tracking-widest text-brandOrange mb-1">Quick answers</p>
-          <h2 class="font-headline font-bold uppercase text-3xl sm:text-5xl text-white tracking-tight">
+          <p
+            class="font-headline font-bold text-xs uppercase tracking-widest text-brandOrange mb-1"
+          >
+            Quick answers
+          </p>
+          <h2
+            class="font-headline font-bold uppercase text-3xl sm:text-5xl text-white tracking-tight"
+          >
             Quick answers
           </h2>
-          <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:14px; color:rgba(255,255,255,0.70); margin-top:4px;">
-            Fitness Extreme Intl  Hyderabad, Banjara Hills.
+          <p
+            style="
+              font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+              font-size: 14px;
+              color: rgba(255, 255, 255, 0.7);
+              margin-top: 4px;
+            "
+          >
+            Fitness Extreme Intl Hyderabad, Banjara Hills.
           </p>
         </div>
 
         <div class="space-y-3">
-          
           <!-- Q1: Timings -->
           <details class="group faq-item">
-            <summary class="flex items-center justify-between cursor-pointer font-headline font-bold text-lg sm:text-xl text-white list-none select-none">
+            <summary
+              class="flex items-center justify-between cursor-pointer font-headline font-bold text-lg sm:text-xl text-white list-none select-none"
+            >
               <span>What are your timings?</span>
-              <span style="width:28px; height:28px; background:#2F2F36; color:#fff; display:flex; align-items:center; justify-content:center; font-size:11px;" class="group-open:rotate-180 transition-transform">
+              <span
+                style="
+                  width: 28px;
+                  height: 28px;
+                  background: #2f2f36;
+                  color: #fff;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 11px;
+                "
+                class="group-open:rotate-180 transition-transform"
+              >
                 ▾
               </span>
             </summary>
-            <div style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.78); border-top:1px solid rgba(255,255,255,0.15); margin-top:12px; padding-top:12px;">
-              Monday to Saturday 5:00 AM to 11:00 PM. Sunday 6:00 AM to 10:00 PM.
+            <div
+              style="
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+                color: rgba(255, 255, 255, 0.78);
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                margin-top: 12px;
+                padding-top: 12px;
+              "
+            >
+              Monday to Saturday 5:00 AM to 11:00 PM. Sunday 6:00 AM to 10:00
+              PM.
             </div>
           </details>
 
           <!-- Q2: Day pass -->
           <details class="group faq-item">
-            <summary class="flex items-center justify-between cursor-pointer font-headline font-bold text-lg sm:text-xl text-white list-none select-none">
+            <summary
+              class="flex items-center justify-between cursor-pointer font-headline font-bold text-lg sm:text-xl text-white list-none select-none"
+            >
               <span>How much is the day pass?</span>
-              <span style="width:28px; height:28px; background:#2F2F36; color:#fff; display:flex; align-items:center; justify-content:center; font-size:11px;" class="group-open:rotate-180 transition-transform">
+              <span
+                style="
+                  width: 28px;
+                  height: 28px;
+                  background: #2f2f36;
+                  color: #fff;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 11px;
+                "
+                class="group-open:rotate-180 transition-transform"
+              >
                 ▾
               </span>
             </summary>
-            <div style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.78); border-top:1px solid rgba(255,255,255,0.15); margin-top:12px; padding-top:12px;">
+            <div
+              style="
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+                color: rgba(255, 255, 255, 0.78);
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                margin-top: 12px;
+                padding-top: 12px;
+              "
+            >
               ₹500. If you join, the amount is adjusted towards your membership.
             </div>
           </details>
 
           <!-- Q3: Membership -->
           <details class="group faq-item">
-            <summary class="flex items-center justify-between cursor-pointer font-headline font-bold text-lg sm:text-xl text-white list-none select-none">
+            <summary
+              class="flex items-center justify-between cursor-pointer font-headline font-bold text-lg sm:text-xl text-white list-none select-none"
+            >
               <span>How much is a 1-year membership?</span>
-              <span style="width:28px; height:28px; background:#2F2F36; color:#fff; display:flex; align-items:center; justify-content:center; font-size:11px;" class="group-open:rotate-180 transition-transform">
+              <span
+                style="
+                  width: 28px;
+                  height: 28px;
+                  background: #2f2f36;
+                  color: #fff;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 11px;
+                "
+                class="group-open:rotate-180 transition-transform"
+              >
                 ▾
               </span>
             </summary>
-            <div style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.78); border-top:1px solid rgba(255,255,255,0.15); margin-top:12px; padding-top:12px; space-y-2;">
+            <div
+              style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.78); border-top:1px solid rgba(255,255,255,0.15); margin-top:12px; padding-top:12px; space-y-2;"
+            >
               ₹25,000. Call or WhatsApp us for current terms.
             </div>
           </details>
 
           <!-- Q4: Location -->
           <details class="group faq-item">
-            <summary class="flex items-center justify-between cursor-pointer font-headline font-bold text-lg sm:text-xl text-white list-none select-none">
+            <summary
+              class="flex items-center justify-between cursor-pointer font-headline font-bold text-lg sm:text-xl text-white list-none select-none"
+            >
               <span>Where is the gym?</span>
-              <span style="width:28px; height:28px; background:#2F2F36; color:#fff; display:flex; align-items:center; justify-content:center; font-size:11px;" class="group-open:rotate-180 transition-transform">
+              <span
+                style="
+                  width: 28px;
+                  height: 28px;
+                  background: #2f2f36;
+                  color: #fff;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 11px;
+                "
+                class="group-open:rotate-180 transition-transform"
+              >
                 ▾
               </span>
             </summary>
-            <div style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.78); border-top:1px solid rgba(255,255,255,0.15); margin-top:12px; padding-top:12px;">
-              1st Floor, HSR Summit, Road No. 10, Banjara Hills, above SBI Bank and next to the Indian Oil petrol station.
+            <div
+              style="
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+                color: rgba(255, 255, 255, 0.78);
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                margin-top: 12px;
+                padding-top: 12px;
+              "
+            >
+              1st Floor, HSR Summit, Road No. 10, Banjara Hills, above SBI Bank
+              and next to the Indian Oil petrol station.
             </div>
           </details>
 
           <!-- Q5: Personal training -->
           <details class="group faq-item">
-            <summary class="flex items-center justify-between cursor-pointer font-headline font-bold text-lg sm:text-xl text-white list-none select-none">
+            <summary
+              class="flex items-center justify-between cursor-pointer font-headline font-bold text-lg sm:text-xl text-white list-none select-none"
+            >
               <span>Do you offer personal training?</span>
-              <span style="width:28px; height:28px; background:#2F2F36; color:#fff; display:flex; align-items:center; justify-content:center; font-size:11px;" class="group-open:rotate-180 transition-transform">
+              <span
+                style="
+                  width: 28px;
+                  height: 28px;
+                  background: #2f2f36;
+                  color: #fff;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 11px;
+                "
+                class="group-open:rotate-180 transition-transform"
+              >
                 ▾
               </span>
             </summary>
-            <div style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.78); border-top:1px solid rgba(255,255,255,0.15); margin-top:12px; padding-top:12px;">
-              Yes. Book a consultation and a trainer will help you choose a plan.
+            <div
+              style="
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+                color: rgba(255, 255, 255, 0.78);
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                margin-top: 12px;
+                padding-top: 12px;
+              "
+            >
+              Yes. Book a consultation and a trainer will help you choose a
+              plan.
             </div>
           </details>
-
         </div>
-
       </div>
     </section>
 
     <!-- SECTION 10: VISIT US SECTION & MAP LINK (Alternate Section #0A0A1A) -->
-    <section class="py-16 sm:py-20 border-t border-white/20" style="background:#0A0A1A;" id="visit">
+    <section
+      class="py-16 sm:py-20 border-t border-white/20"
+      style="background: #0a0a1a"
+      id="visit"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
           <!-- Left: Entrance Photo Slot (20px rounded photo per specs) -->
-          <div class="lg:col-span-6 photo-rounded overflow-hidden aspect-[16/10] sm:aspect-[4/3] img-slot-container relative" style="border:1px solid rgba(255,255,255,0.20);">
+          <div
+            class="lg:col-span-6 photo-rounded overflow-hidden aspect-[16/10] sm:aspect-[4/3] img-slot-container relative"
+            style="border: 1px solid rgba(255, 255, 255, 0.2)"
+          >
             <img
               id="slot-entrance"
-              src="/img/WhatsApp%20Image%202026-11-06%20at%2011.12.20%20AM%20%283%29.webp"
+              src="/img/img_17.webp"
               data-fallback="/img/entrance.jpg"
               alt="Fitness Extreme Intl  Hyderabad, Banjara Hills"
               loading="lazy"
-              onerror="handleSlotFallback(this, 'img_18.jpeg', 'Fitness Extreme Intl  Hyderabad')"
+              onerror="
+                handleSlotFallback(
+                  this,
+                  'img_18.jpeg',
+                  'Fitness Extreme Intl  Hyderabad',
+                )
+              "
               class="w-full h-full object-cover photo-rounded"
             />
             <div class="slot-fallback" id="fallback-img_18.jpeg">
-              <span class="font-mono text-xs uppercase text-white/70 font-semibold">[Branch Entrance]</span>
+              <span
+                class="font-mono text-xs uppercase text-white/70 font-semibold"
+                >[Branch Entrance]</span
+              >
             </div>
-            <div style="position:absolute; bottom:12px; left:12px; background:#04040F; border:1px solid rgba(255,255,255,0.20); padding:8px 14px;">
-              <span class="font-headline font-bold text-white uppercase tracking-wider text-xs">
-                Fitness Extreme Intl  Hyderabad
+            <div
+              style="
+                position: absolute;
+                bottom: 12px;
+                left: 12px;
+                background: #04040f;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                padding: 8px 14px;
+              "
+            >
+              <span
+                class="font-headline font-bold text-white uppercase tracking-wider text-xs"
+              >
+                Fitness Extreme Intl Hyderabad
               </span>
             </div>
           </div>
 
           <!-- Right: Branch Details & Directions CTA -->
           <div class="lg:col-span-6 space-y-5">
-            <span class="font-headline font-bold text-xs uppercase tracking-widest text-brandOrange">Visit us</span>
-            <h2 class="font-headline font-bold uppercase text-3xl sm:text-5xl text-white tracking-tight leading-tight">
-              Fitness Extreme Intl  Hyderabad
+            <span
+              class="font-headline font-bold text-xs uppercase tracking-widest text-brandOrange"
+              >Visit us</span
+            >
+            <h2
+              class="font-headline font-bold uppercase text-3xl sm:text-5xl text-white tracking-tight leading-tight"
+            >
+              Fitness Extreme Intl Hyderabad
             </h2>
 
-            <div class="space-y-3.5 text-sm" style="font-family:'Roboto Condensed',Arial,sans-serif; color:rgba(255,255,255,0.80);">
+            <div
+              class="space-y-3.5 text-sm"
+              style="
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                color: rgba(255, 255, 255, 0.8);
+              "
+            >
               <div>
                 <strong class="text-white block font-bold">Address:</strong>
-                <span>#8-2-603/23/3 &amp; 15, 1st Floor, HSR Summit, Road No. 10, Banjara Hills, Hyderabad, Telangana  500034. Above SBI Bank, opposite IAS &amp; IPS Quarters, next to Indian Oil Petrol Station.</span>
+                <span
+                  >#8-2-603/23/3 &amp; 15, 1st Floor, HSR Summit, Road No. 10,
+                  Banjara Hills, Hyderabad, Telangana 500034. Above SBI Bank,
+                  opposite IAS &amp; IPS Quarters, next to Indian Oil Petrol
+                  Station.</span
+                >
               </div>
 
               <div>
                 <strong class="text-white block font-bold">WhatsApp:</strong>
-                <a href="https://wa.me/917593866600" class="inline-flex items-center gap-2 hover:underline font-bold" style="color:#E8731A;">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:18px;height:18px;"><path d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"/></svg>
+                <a
+                  href="https://wa.me/917593866600"
+                  class="inline-flex items-center gap-2 hover:underline font-bold"
+                  style="color: #e8731a"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    style="width: 18px; height: 18px"
+                  >
+                    <path
+                      d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"
+                    />
+                  </svg>
                   +91 75938 66600
                 </a>
               </div>
 
               <div>
-                <strong class="text-white block font-bold">Opening hours:</strong>
-                <span>Monday to Saturday: 5:00 AM to 11:00 PM. Sunday: 6:00 AM to 10:00 PM.</span>
+                <strong class="text-white block font-bold"
+                  >Opening hours:</strong
+                >
+                <span
+                  >Monday to Saturday: 5:00 AM to 11:00 PM. Sunday: 6:00 AM to
+                  10:00 PM.</span
+                >
               </div>
             </div>
 
-            <div style="background:#111118; border:1px solid rgba(255,255,255,0.20); padding:16px;">
-              <p class="font-headline font-bold uppercase text-white/70 tracking-wider text-xs mb-1">WhatsApp</p>
-              <p class="font-headline font-bold text-2xl tracking-wide uppercase" style="color:#F47C48;">+91 75938 66600</p>
+            <div
+              style="
+                background: #111118;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                padding: 16px;
+              "
+            >
+              <p
+                class="font-headline font-bold uppercase text-white/70 tracking-wider text-xs mb-1"
+              >
+                WhatsApp
+              </p>
+              <p
+                class="font-headline font-bold text-2xl tracking-wide uppercase"
+                style="color: #f47c48"
+              >
+                +91 75938 66600
+              </p>
             </div>
 
             <!-- Action Buttons: Secondary outline button + Coral call button + WhatsApp -->
@@ -1400,16 +2606,18 @@
                 target="_blank"
                 rel="noopener"
                 class="btn-secondary"
-                style="padding:13px 22px; font-size:13px;"
+                style="padding: 13px 22px; font-size: 13px"
               >
                 <span>Get directions</span>
               </a>
 
               <a
                 href="tel:+917593866600"
-                onclick="trackEvent('call_click', { placement: 'visit_section' })"
+                onclick="
+                  trackEvent('call_click', { placement: 'visit_section' })
+                "
                 class="btn-coral"
-                style="padding:13px 22px; font-size:13px;"
+                style="padding: 13px 22px; font-size: 13px"
               >
                 <span>Call</span>
               </a>
@@ -1419,109 +2627,231 @@
                 target="_blank"
                 rel="noopener"
                 class="btn-wa icon-button"
-                style="padding:13px 20px; font-size:13px;"
+                style="padding: 13px 20px; font-size: 13px"
               >
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"
+                  />
+                </svg>
                 <span>WhatsApp</span>
               </a>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
 
     <!-- FINAL CALL TO ACTION -->
-    <section class="py-16 sm:py-20 border-t border-white/20" style="background:#04040F;">
+    <section
+      class="py-16 sm:py-20 border-t border-white/20"
+      style="background: #04040f"
+    >
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="font-headline font-bold uppercase text-3xl sm:text-5xl text-white tracking-tight">
+        <h2
+          class="font-headline font-bold uppercase text-3xl sm:text-5xl text-white tracking-tight"
+        >
           Be fit. Be happy.
         </h2>
-        <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:15px; color:rgba(255,255,255,0.78); margin:12px auto 20px; max-width:620px;">
-          Not ready to join yet? Send an enquiry and we'll answer your questions about plans, timings and trainers. No pressure.
+        <p
+          style="
+            font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.78);
+            margin: 12px auto 20px;
+            max-width: 620px;
+          "
+        >
+          Not ready to join yet? Send an enquiry and we'll answer your questions
+          about plans, timings and trainers. No pressure.
         </p>
-        <a href="#enquiry-form" class="btn-primary">
-          Send an enquiry
-        </a>
+        <a href="#enquiry-form" class="btn-primary"> Send an enquiry </a>
       </div>
     </section>
 
     <!-- SECTION 11: FOOTER & PRIVACY POLICY (Background #04040F) -->
-    <footer class="py-12 text-white/70 text-xs border-t border-white/20" style="background:#04040F;">
+    <footer
+      class="py-12 text-white/70 text-xs border-t border-white/20"
+      style="background: #04040f"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-white/15">
-          
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-white/15"
+        >
           <!-- Col 1: Brand Info with prominent logo -->
           <div class="md:col-span-2 space-y-3">
             <div class="flex items-center gap-3">
               <img
-                src="/img/Copy%20of%20fei%20-%20intl.webp"
-                onerror="this.src='/img/fei-logo-header.png'"
+                src="/img/img_2.webp"
+                onerror="this.src = '/img/fei-logo-header.png'"
                 alt="Fitness Extreme International"
-                style="width: 52px; height: 52px; object-fit: contain; display: block;"
+                style="
+                  width: 52px;
+                  height: 52px;
+                  object-fit: contain;
+                  display: block;
+                "
               />
-              <span class="font-headline font-bold uppercase text-xl text-white tracking-tight">FITNESS EXTREME INTERNATIONAL</span>
+              <span
+                class="font-headline font-bold uppercase text-xl text-white tracking-tight"
+                >FITNESS EXTREME INTERNATIONAL</span
+              >
             </div>
-            <p style="font-family:'Roboto Condensed',Arial,sans-serif; font-size:13px; line-height:1.6; color:rgba(255,255,255,0.60); max-width:400px;">
-              Fitness Extreme Intl  Hyderabad, Banjara Hills, Hyderabad.
+            <p
+              style="
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                font-size: 13px;
+                line-height: 1.6;
+                color: rgba(255, 255, 255, 0.6);
+                max-width: 400px;
+              "
+            >
+              Fitness Extreme Intl Hyderabad, Banjara Hills, Hyderabad.
             </p>
-            <p class="font-headline font-bold text-white/80 uppercase tracking-widest text-xs pt-1">
+            <p
+              class="font-headline font-bold text-white/80 uppercase tracking-widest text-xs pt-1"
+            >
               Be fit. Be happy.
             </p>
           </div>
 
           <!-- Col 2: Quick Links -->
           <div class="space-y-2">
-            <p class="font-headline font-bold text-white uppercase tracking-wider text-sm">Quick Jump</p>
-            <ul class="space-y-1.5 text-xs" style="font-family:'Roboto Condensed',Arial,sans-serif;">
-              <li><a href="#offer-panel" class="hover:text-white transition">Membership and offers</a></li>
-              <li><a href="#facilities" class="hover:text-white transition">What you get</a></li>
-              <li><a href="#personal-training" class="hover:text-white transition">Personal training</a></li>
-              <li><a href="#faq" class="hover:text-white transition">Quick answers</a></li>
-              <li><a href="#visit" class="hover:text-white transition">Visit us</a></li>
+            <p
+              class="font-headline font-bold text-white uppercase tracking-wider text-sm"
+            >
+              Quick Jump
+            </p>
+            <ul
+              class="space-y-1.5 text-xs"
+              style="
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+              "
+            >
+              <li>
+                <a href="#offer-panel" class="hover:text-white transition"
+                  >Membership and offers</a
+                >
+              </li>
+              <li>
+                <a href="#facilities" class="hover:text-white transition"
+                  >What you get</a
+                >
+              </li>
+              <li>
+                <a href="#personal-training" class="hover:text-white transition"
+                  >Personal training</a
+                >
+              </li>
+              <li>
+                <a href="#faq" class="hover:text-white transition"
+                  >Quick answers</a
+                >
+              </li>
+              <li>
+                <a href="#visit" class="hover:text-white transition"
+                  >Visit us</a
+                >
+              </li>
             </ul>
           </div>
 
           <!-- Col 3: Contact & Legal -->
           <div class="space-y-2">
-            <p class="font-headline font-bold text-white uppercase tracking-wider text-sm">Contact &amp; Legal</p>
-            <p style="font-family:'Roboto Condensed',Arial,sans-serif; color:rgba(255,255,255,0.80);">#8-2-603/23/3 &amp; 15, 1st Floor, HSR Summit, Road No. 10, Banjara Hills, Hyderabad, Telangana  500034.</p>
-            <p style="font-family:'Roboto Condensed',Arial,sans-serif;">WhatsApp: <a href="https://wa.me/917593866600" class="inline-flex items-center gap-1 text-white hover:text-brandOrange transition"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:16px;height:16px;"><path d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"/></svg>+91 75938 66600</a></p>
+            <p
+              class="font-headline font-bold text-white uppercase tracking-wider text-sm"
+            >
+              Contact &amp; Legal
+            </p>
+            <p
+              style="
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+                color: rgba(255, 255, 255, 0.8);
+              "
+            >
+              #8-2-603/23/3 &amp; 15, 1st Floor, HSR Summit, Road No. 10,
+              Banjara Hills, Hyderabad, Telangana 500034.
+            </p>
+            <p
+              style="
+                font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+              "
+            >
+              WhatsApp:
+              <a
+                href="https://wa.me/917593866600"
+                class="inline-flex items-center gap-1 text-white hover:text-brandOrange transition"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  style="width: 16px; height: 16px"
+                >
+                  <path
+                    d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"
+                  /></svg
+                >+91 75938 66600</a
+              >
+            </p>
             <div class="pt-2">
               <button
                 type="button"
                 onclick="togglePrivacyModal(true)"
-                style="color:#E8731A; background:transparent; border:none; padding:0; cursor:pointer; font-weight:700; text-decoration:underline;"
+                style="
+                  color: #e8731a;
+                  background: transparent;
+                  border: none;
+                  padding: 0;
+                  cursor: pointer;
+                  font-weight: 700;
+                  text-decoration: underline;
+                "
               >
                 Privacy policy
               </button>
             </div>
           </div>
-
         </div>
 
-        <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-white/40 text-[11px]" style="font-family:'Roboto Condensed',Arial,sans-serif;">
-          <p>© Fitness Extreme International. Fitness Extreme Intl  Hyderabad, Banjara Hills, Hyderabad. Privacy policy.</p>
+        <div
+          class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-white/40 text-[11px]"
+          style="font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif"
+        >
+          <p>
+            © Fitness Extreme International. Fitness Extreme Intl Hyderabad,
+            Banjara Hills, Hyderabad. Privacy policy.
+          </p>
         </div>
-
       </div>
     </footer>
 
     <!-- MOBILE STICKY CTA BAR (Bottom fixed bar) -->
-    <div class="mobile-cta-bar fixed bottom-0 inset-x-0 z-40 md:hidden grid grid-cols-3 divide-x divide-white/20 text-white text-xs"
-         style="background:rgba(17,17,24,0.98); border-top:1px solid rgba(255,255,255,0.20);">
-      
+    <div
+      class="mobile-cta-bar fixed bottom-0 inset-x-0 z-40 md:hidden grid grid-cols-3 divide-x divide-white/20 text-white text-xs"
+      style="
+        background: rgba(17, 17, 24, 0.98);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      "
+    >
       <!-- Call Button in Coral Orange -->
       <a
         href="tel:+917593866600"
         onclick="trackEvent('call_click', { placement: 'mobile_sticky' })"
         class="flex flex-col items-center justify-center py-2.5 active:bg-white/5 transition"
-        style="color:#F47C48;"
+        style="color: #f47c48"
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="width:19px;height:19px;"><path d="M5 4h4l2 5-2.5 1.5a15 15 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A17 17 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+          style="width: 19px; height: 19px"
+        >
+          <path
+            d="M5 4h4l2 5-2.5 1.5a15 15 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A17 17 0 0 1 4 5a1 1 0 0 1 1-1Z"
+          />
+        </svg>
         <span class="font-bold">Call Now</span>
       </a>
 
@@ -1532,9 +2862,18 @@
         rel="noopener"
         onclick="trackEvent('whatsapp_click', { placement: 'mobile_sticky' })"
         class="flex flex-col items-center justify-center py-2.5 active:bg-white/5 transition"
-        style="color:#1FAA59;"
+        style="color: #1faa59"
       >
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:20px;height:20px;"><path d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"/></svg>
+        <svg
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+          style="width: 20px; height: 20px"
+        >
+          <path
+            d="M20.52 3.48A11.84 11.84 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.87c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.54 0 11.87-5.33 11.9-11.87a11.8 11.8 0 0 0-3.48-8.43ZM12.1 21.76a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.86 9.86 0 0 1-1.52-5.24c0-5.46 4.45-9.9 9.92-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c-.03 5.46-4.48 9.9-9.91 9.9Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.45-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.06 1.03-1.06 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.23 5.14 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.73 2.02-1.43.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"
+          />
+        </svg>
         <span class="font-bold">WhatsApp</span>
       </a>
 
@@ -1542,29 +2881,66 @@
       <a
         href="#enquiry-form"
         class="flex flex-col items-center justify-center py-2.5 text-white font-headline font-bold uppercase tracking-wider text-xs transition"
-        style="background:#E8731A;"
+        style="background: #e8731a"
       >
         <span>Book visit</span>
       </a>
-
     </div>
 
     <!-- PRIVACY POLICY MODAL (Google Ads Requirement) -->
-    <div id="privacyModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm p-4 overflow-y-auto flex items-center justify-center">
-      <div style="background:#111118; border:1px solid rgba(255,255,255,0.20); max-width:640px; width:100%; padding:28px; color:#fff; position:relative; max-height:90vh; overflow-y:auto;" class="text-xs sm:text-sm space-y-4">
-        
-        <div class="flex items-center justify-between pb-3 border-b border-white/20">
-          <h3 class="font-headline font-bold text-xl uppercase text-white">Privacy policy</h3>
-          <button type="button" onclick="togglePrivacyModal(false)" class="text-white/60 hover:text-white text-lg p-1">
+    <div
+      id="privacyModal"
+      class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm p-4 overflow-y-auto flex items-center justify-center"
+    >
+      <div
+        style="
+          background: #111118;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          max-width: 640px;
+          width: 100%;
+          padding: 28px;
+          color: #fff;
+          position: relative;
+          max-height: 90vh;
+          overflow-y: auto;
+        "
+        class="text-xs sm:text-sm space-y-4"
+      >
+        <div
+          class="flex items-center justify-between pb-3 border-b border-white/20"
+        >
+          <h3 class="font-headline font-bold text-xl uppercase text-white">
+            Privacy policy
+          </h3>
+          <button
+            type="button"
+            onclick="togglePrivacyModal(false)"
+            class="text-white/60 hover:text-white text-lg p-1"
+          >
             ×
           </button>
         </div>
 
-        <div class="space-y-3 leading-relaxed" style="font-family:'Roboto Condensed',Arial,sans-serif; color:rgba(255,255,255,0.75);">
-          <p>We collect your name and mobile number to respond to your enquiry about Fitness Extreme Intl  Hyderabad.</p>
+        <div
+          class="space-y-3 leading-relaxed"
+          style="
+            font-family: &quot;Roboto Condensed&quot;, Arial, sans-serif;
+            color: rgba(255, 255, 255, 0.75);
+          "
+        >
+          <p>
+            We collect your name and mobile number to respond to your enquiry
+            about Fitness Extreme Intl Hyderabad.
+          </p>
           <p>Our team will call you back, usually within a few hours.</p>
-          <p>Day pass fee is adjusted against membership purchase. Contact the branch for current terms.</p>
-          <p>#8-2-603/23/3 &amp; 15, 1st Floor, HSR Summit, Road No. 10, Banjara Hills, Hyderabad, Telangana  500034.</p>
+          <p>
+            Day pass fee is adjusted against membership purchase. Contact the
+            branch for current terms.
+          </p>
+          <p>
+            #8-2-603/23/3 &amp; 15, 1st Floor, HSR Summit, Road No. 10, Banjara
+            Hills, Hyderabad, Telangana 500034.
+          </p>
           <p>WhatsApp: +91 75938 66600</p>
         </div>
 
@@ -1573,12 +2949,11 @@
             type="button"
             onclick="togglePrivacyModal(false)"
             class="btn-primary"
-            style="padding:8px 20px; font-size:12px;"
+            style="padding: 8px 20px; font-size: 12px"
           >
             Close
           </button>
         </div>
-
       </div>
     </div>
 
@@ -1587,65 +2962,81 @@
       // 1. UTM & GCLID Cookie / URL Parameter Extraction (90-day retention)
       function getQueryParam(param) {
         const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param) || '';
+        return urlParams.get(param) || "";
       }
 
       function setCookie(name, value, days) {
         if (!value) return;
         const d = new Date();
-        d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-        document.cookie = name + "=" + encodeURIComponent(value) + ";expires=" + d.toUTCString() + ";path=/;SameSite=Lax";
+        d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
+        document.cookie =
+          name +
+          "=" +
+          encodeURIComponent(value) +
+          ";expires=" +
+          d.toUTCString() +
+          ";path=/;SameSite=Lax";
       }
 
       function getCookie(name) {
         const cname = name + "=";
         const decodedCookie = decodeURIComponent(document.cookie);
-        const ca = decodedCookie.split(';');
+        const ca = decodedCookie.split(";");
         for (let i = 0; i < ca.length; i++) {
           let c = ca[i].trim();
-          if (c.indexOf(cname) === 0) return c.substring(cname.length, c.length);
+          if (c.indexOf(cname) === 0)
+            return c.substring(cname.length, c.length);
         }
-        return '';
+        return "";
       }
 
       // Capture tracking on landing
-      const trackingKeys = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+      const trackingKeys = [
+        "gclid",
+        "gbraid",
+        "wbraid",
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_term",
+        "utm_content",
+      ];
       const trackingData = {};
 
-      trackingKeys.forEach(key => {
+      trackingKeys.forEach((key) => {
         const urlVal = getQueryParam(key);
         if (urlVal) {
           setCookie(key, urlVal, 90);
           trackingData[key] = urlVal;
         } else {
-          trackingData[key] = getCookie(key) || '';
+          trackingData[key] = getCookie(key) || "";
         }
       });
 
       // 2. Self-Healing Image Slot Fallback Handler (Never display a broken image)
       function handleSlotFallback(imgEl, slotFilename, label) {
         // First try secondary fallback path if available
-        const secondary = imgEl.getAttribute('data-fallback');
+        const secondary = imgEl.getAttribute("data-fallback");
         if (secondary && imgEl.src.indexOf(secondary) === -1) {
           imgEl.src = secondary;
           return;
         }
 
         // Hide broken image and activate the dark styled placeholder
-        imgEl.style.display = 'none';
-        const fallbackBox = document.getElementById('fallback-' + slotFilename);
+        imgEl.style.display = "none";
+        const fallbackBox = document.getElementById("fallback-" + slotFilename);
         if (fallbackBox) {
-          fallbackBox.style.display = 'flex';
+          fallbackBox.style.display = "flex";
         } else {
           // Dynamic fallback creation
           const parent = imgEl.parentElement;
           if (parent) {
-            const fb = document.createElement('div');
-            fb.className = 'slot-fallback';
-            fb.style.display = 'flex';
+            const fb = document.createElement("div");
+            fb.className = "slot-fallback";
+            fb.style.display = "flex";
             fb.innerHTML = `
               <span class="font-mono text-xs uppercase text-white/80 font-bold">[Image Slot: ${slotFilename}]</span>
-              <span class="text-[11px] text-white/40 mt-1">${label || 'Drop file into /public/img/'}</span>
+              <span class="text-[11px] text-white/40 mt-1">${label || "Drop file into /public/img/"}</span>
             `;
             parent.appendChild(fb);
           }
@@ -1657,115 +3048,123 @@
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: eventName,
-          branch: 'Hyderabad - Banjara Hills',
+          branch: "Hyderabad - Banjara Hills",
           timestamp: new Date().toISOString(),
-          ...eventProps
+          ...eventProps,
         });
       }
 
       // 4. Privacy Modal Toggle
       function togglePrivacyModal(show) {
-        const modal = document.getElementById('privacyModal');
+        const modal = document.getElementById("privacyModal");
         if (show) {
-          modal.classList.remove('hidden');
-          document.body.style.overflow = 'hidden';
+          modal.classList.remove("hidden");
+          document.body.style.overflow = "hidden";
         } else {
-          modal.classList.add('hidden');
-          document.body.style.overflow = '';
+          modal.classList.add("hidden");
+          document.body.style.overflow = "";
         }
       }
 
       // 5. AJAX Form Submission Connecting with Monolithic Backend (/api/submit)
-      const contactForm = document.getElementById('contactForm');
-      const submitBtn = document.getElementById('submitBtn');
-      const btnText = document.getElementById('btnText');
-      const formMessage = document.getElementById('formMessage');
+      const contactForm = document.getElementById("contactForm");
+      const submitBtn = document.getElementById("submitBtn");
+      const btnText = document.getElementById("btnText");
+      const formMessage = document.getElementById("formMessage");
 
-      contactForm.addEventListener('submit', async (e) => {
+      contactForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 
         // Honeypot spam check
-        const honeypot = document.getElementById('hp_field').value;
+        const honeypot = document.getElementById("hp_field").value;
         if (honeypot) {
-          console.warn('Spam submission detected.');
+          console.warn("Spam submission detected.");
           return;
         }
 
-        const name = document.getElementById('name').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const branch = document.getElementById('preferred_branch').value;
-        const userMessage = document.getElementById('message_input').value.trim();
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const branch = document.getElementById("preferred_branch").value;
+        const userMessage = document
+          .getElementById("message_input")
+          .value.trim();
 
         // 10-digit Indian Mobile validation
         const phoneRegex = /^[6-9]\d{9}$/;
         if (!phoneRegex.test(phone)) {
-          formMessage.className = 'p-3 rounded-lg text-xs font-semibold text-center bg-red-950/80 text-red-300 border border-red-800';
-          formMessage.textContent = 'Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9.';
-          formMessage.classList.remove('hidden');
+          formMessage.className =
+            "p-3 rounded-lg text-xs font-semibold text-center bg-red-950/80 text-red-300 border border-red-800";
+          formMessage.textContent =
+            "Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9.";
+          formMessage.classList.remove("hidden");
           return;
         }
 
         let enrichedMessage = userMessage;
-        
+
         // Append tracking parameters if present
         const utmParts = [];
-        if (trackingData.utm_source) utmParts.push(`src:${trackingData.utm_source}`);
-        if (trackingData.utm_campaign) utmParts.push(`camp:${trackingData.utm_campaign}`);
+        if (trackingData.utm_source)
+          utmParts.push(`src:${trackingData.utm_source}`);
+        if (trackingData.utm_campaign)
+          utmParts.push(`camp:${trackingData.utm_campaign}`);
         if (trackingData.gclid) utmParts.push(`gclid:${trackingData.gclid}`);
         if (utmParts.length > 0) {
-          enrichedMessage += ` | [Tracking: ${utmParts.join(', ')}]`;
+          enrichedMessage += ` | [Tracking: ${utmParts.join(", ")}]`;
         }
 
         const payload = {
           name: name,
           email: email,
           phone: phone,
-          message: enrichedMessage
+          message: enrichedMessage,
         };
 
         // Loading state
         submitBtn.disabled = true;
-        btnText.textContent = 'Sending enquiry...';
-        formMessage.classList.add('hidden');
+        btnText.textContent = "Sending enquiry...";
+        formMessage.classList.add("hidden");
 
         try {
-          const res = await fetch('/api/submit', {
-            method: 'POST',
+          const res = await fetch("/api/submit", {
+            method: "POST",
             headers: {
-              'Content-Type': 'application/json'
+              "Content-Type": "application/json",
             },
-            body: JSON.stringify(payload)
+            body: JSON.stringify(payload),
           });
 
           const result = await res.json();
 
           if (res.ok && result.success) {
-            formMessage.className = 'p-4 rounded-xl text-xs sm:text-sm font-semibold text-center bg-emerald-950/80 text-emerald-200 border border-emerald-700/60 shadow-lg';
-            formMessage.textContent = 'Enquiry received. Our team will call you shortly to confirm your visit.';
-            formMessage.classList.remove('hidden');
+            formMessage.className =
+              "p-4 rounded-xl text-xs sm:text-sm font-semibold text-center bg-emerald-950/80 text-emerald-200 border border-emerald-700/60 shadow-lg";
+            formMessage.textContent =
+              "Enquiry received. Our team will call you shortly to confirm your visit.";
+            formMessage.classList.remove("hidden");
             contactForm.reset();
 
             // Push lead_submit to dataLayer only on verified save
-            trackEvent('lead_submit', {
+            trackEvent("lead_submit", {
               lead_name: name,
-              branch: branch
+              branch: branch,
             });
-
           } else {
-            throw new Error(result.message || 'Submission failed.');
+            throw new Error(result.message || "Submission failed.");
           }
         } catch (err) {
           console.error(err);
-          formMessage.className = 'p-3 rounded-lg text-xs font-semibold text-center bg-red-950/80 text-red-300 border border-red-800';
-          formMessage.textContent = 'Could not submit your request. Please call us directly at +91 75938 66600.';
-          formMessage.classList.remove('hidden');
+          formMessage.className =
+            "p-3 rounded-lg text-xs font-semibold text-center bg-red-950/80 text-red-300 border border-red-800";
+          formMessage.textContent =
+            "Could not submit your request. Please call us directly at +91 75938 66600.";
+          formMessage.classList.remove("hidden");
         } finally {
           submitBtn.disabled = false;
-          btnText.textContent = 'Get my free enquiry call';
+          btnText.textContent = "Get my free enquiry call";
         }
       });
     </script>
-
   </body>
 </html>
