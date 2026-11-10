@@ -11,7 +11,7 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" />
-  <link rel="icon" type="image/webp" href="/img/Copy%20of%20fei%20-%20intl.webp">
+  <link rel="icon" type="image/webp" href="/img/img_2.webp">
     <!-- excel & pdf sheets link -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -37,6 +37,40 @@
     .font-display { font-family: "Space Grotesk", sans-serif; }
     .font-mono { font-family: "IBM Plex Mono", monospace; }
     ::selection { background: var(--amber-400); color: var(--navy-950); }
+    .admin-dialog {
+      width: min(calc(100% - 2rem), 28rem);
+      max-width: none;
+      margin: auto;
+      padding: 0;
+      border: 0;
+      border-radius: 1.5rem;
+      color: var(--ink);
+      box-shadow: 0 24px 80px rgba(13, 18, 48, 0.28);
+    }
+    .admin-dialog::backdrop {
+      background: rgba(13, 18, 48, 0.58);
+      backdrop-filter: blur(5px);
+    }
+    .admin-dialog[open] {
+      animation: dialog-enter 180ms ease-out;
+    }
+    @keyframes dialog-enter {
+      from { opacity: 0; transform: translateY(10px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    #adminToast {
+      opacity: 0;
+      transform: translateY(0.5rem);
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+    #adminToast.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #adminToast[hidden] { display: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .admin-dialog[open], #adminToast { animation: none; transition: none; }
+    }
     @media (max-width: 640px) {
       .leads-table,
       .leads-table tbody {
@@ -98,7 +132,7 @@
       <div class="flex items-center gap-3">
         <div class="flex items-center gap-3">
           <img
-            src="/img/Copy%20of%20fei%20-%20intl.webp"
+            src="/img/img_2.webp"
             alt="Fitness Extreme International"
             class="h-20 w-20 object-contain"
           />
@@ -231,6 +265,54 @@
     </div>
   </main>
 
+  <dialog
+    id="adminActionDialog"
+    class="admin-dialog"
+    aria-labelledby="adminDialogTitle"
+    aria-describedby="adminDialogMessage"
+  >
+    <div class="p-6 sm:p-8 text-center">
+      <div id="adminDialogIcon" class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-rose-50 text-rose-600">
+        <i class="fa-solid fa-trash-can text-2xl" aria-hidden="true"></i>
+      </div>
+      <h2 id="adminDialogTitle" class="font-display text-xl sm:text-2xl font-bold text-[var(--navy-950)]">
+        Delete this enquiry?
+      </h2>
+      <p id="adminDialogMessage" class="mt-2 text-sm leading-6 text-slate-600">
+        This enquiry will be permanently removed.
+      </p>
+      <div class="mt-7 flex flex-col-reverse gap-3 sm:flex-row sm:justify-center">
+        <button
+          id="adminDialogCancel"
+          type="button"
+          class="rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-slate-200"
+        >
+          Keep enquiry
+        </button>
+        <button
+          id="adminDialogConfirm"
+          type="button"
+          class="rounded-xl bg-rose-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-rose-700 focus:outline-none focus:ring-4 focus:ring-rose-200"
+        >
+          Yes, delete
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <div
+    id="adminToast"
+    class="pointer-events-none fixed bottom-5 right-5 z-50 flex items-center gap-3 rounded-2xl border border-emerald-100 bg-white px-5 py-4 text-sm font-semibold text-slate-800 shadow-xl"
+    role="status"
+    aria-live="polite"
+    hidden
+  >
+    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+      <i class="fa-solid fa-check" aria-hidden="true"></i>
+    </span>
+    <span id="adminToastMessage">Enquiry deleted.</span>
+  </div>
+
   <!-- Server-rendered lead data. EJS writes ONE line of JSON here — no loop, no
        EJS tags inside the <script> block below, so editors/linters won't choke
        on <% %> being parsed as JavaScript. -->
@@ -256,6 +338,63 @@
     const pageIndicator = document.getElementById('pageIndicator');
     const paginationSummary = document.getElementById('paginationSummary');
     const leadCountBadge = document.getElementById('leadCountBadge');
+    const adminActionDialog = document.getElementById('adminActionDialog');
+    const adminDialogIcon = document.getElementById('adminDialogIcon');
+    const adminDialogTitle = document.getElementById('adminDialogTitle');
+    const adminDialogMessage = document.getElementById('adminDialogMessage');
+    const adminDialogCancel = document.getElementById('adminDialogCancel');
+    const adminDialogConfirm = document.getElementById('adminDialogConfirm');
+    const adminToast = document.getElementById('adminToast');
+    const adminToastMessage = document.getElementById('adminToastMessage');
+    let toastTimer;
+
+    function showAdminDialog({
+      title,
+      message,
+      confirmLabel = 'OK',
+      cancelLabel = 'Cancel',
+      variant = 'danger',
+      showCancel = true
+    }) {
+      const isDanger = variant === 'danger';
+      adminDialogTitle.textContent = title;
+      adminDialogMessage.textContent = message;
+      adminDialogCancel.textContent = cancelLabel;
+      adminDialogCancel.hidden = !showCancel;
+      adminDialogConfirm.textContent = confirmLabel;
+      adminDialogConfirm.className = isDanger
+        ? 'rounded-xl bg-rose-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-rose-700 focus:outline-none focus:ring-4 focus:ring-rose-200'
+        : 'rounded-xl bg-[var(--navy-900)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--navy-950)] focus:outline-none focus:ring-4 focus:ring-blue-200';
+      adminDialogIcon.className = isDanger
+        ? 'mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-rose-50 text-rose-600'
+        : 'mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-amber-50 text-amber-600';
+      adminDialogIcon.innerHTML = isDanger
+        ? '<i class="fa-solid fa-trash-can text-2xl" aria-hidden="true"></i>'
+        : '<i class="fa-solid fa-triangle-exclamation text-2xl" aria-hidden="true"></i>';
+
+      return new Promise(resolve => {
+        const finish = result => {
+          if (adminActionDialog.open) adminActionDialog.close();
+          resolve(result);
+        };
+        adminDialogCancel.onclick = () => finish(false);
+        adminDialogConfirm.onclick = () => finish(true);
+        adminActionDialog.addEventListener('close', () => resolve(false), { once: true });
+        adminActionDialog.showModal();
+        (showCancel ? adminDialogCancel : adminDialogConfirm).focus();
+      });
+    }
+
+    function showAdminToast(message) {
+      window.clearTimeout(toastTimer);
+      adminToastMessage.textContent = message;
+      adminToast.hidden = false;
+      requestAnimationFrame(() => adminToast.classList.add('is-visible'));
+      toastTimer = window.setTimeout(() => {
+        adminToast.classList.remove('is-visible');
+        window.setTimeout(() => { adminToast.hidden = true; }, 200);
+      }, 3000);
+    }
 
     function escapeHtml(str) {
       const div = document.createElement('div');
@@ -371,7 +510,14 @@
       tbody.querySelectorAll('.delete-lead-btn').forEach(btn => {
   btn.addEventListener('click', async () => {
     const id = btn.dataset.id;
-    if (!confirm('Delete this lead? This cannot be undone.')) return;
+    const confirmed = await showAdminDialog({
+      title: 'Delete this enquiry?',
+      message: 'This enquiry will be permanently removed. You cannot undo this action.',
+      confirmLabel: 'Yes, delete',
+      cancelLabel: 'Keep enquiry',
+      variant: 'danger'
+    });
+    if (!confirmed) return;
 
     try {
       const res = await fetch(`/admin/leads/${id}`, { method: 'DELETE' });
@@ -384,9 +530,16 @@
       if (idxFiltered !== -1) filteredLeads.splice(idxFiltered, 1);
 
       render();
+      showAdminToast('Enquiry deleted successfully.');
     } catch (err) {
-      alert('Could not delete lead. Please try again.');
       console.error(err);
+      await showAdminDialog({
+        title: 'Could not delete enquiry',
+        message: 'Something went wrong while deleting this enquiry. Please try again.',
+        confirmLabel: 'Got it',
+        variant: 'error',
+        showCancel: false
+      });
     }
   });
 });
