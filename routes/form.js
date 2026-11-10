@@ -23,4 +23,17 @@ router.post('/submit', async (req, res) => {
   }
 });
 
+router.get('/header-code', async (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  try {
+    const [snippets] = await db.execute(
+      'SELECT name, type, location, code FROM header_code_snippets WHERE active = 1 ORDER BY id ASC'
+    );
+    res.json({ success: true, snippets });
+  } catch (error) {
+    console.error('Public header code query error:', error);
+    res.status(500).json({ success: false, message: 'Website code is temporarily unavailable.' });
+  }
+});
+
 module.exports = router;

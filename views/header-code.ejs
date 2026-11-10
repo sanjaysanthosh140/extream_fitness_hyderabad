@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header Code Manager | Fitness Extreme International</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" />
+  <link rel="icon" type="image/webp" href="/img/img_2.webp">
+  <style>
+    :root { --navy-950: #0d1230; --navy-900: #182253; --blue-500: #4f6fd1; --bg-soft: #f5f7fc; --ink: #12162e; }
+    * { box-sizing: border-box; }
+    body { font-family: "Inter", sans-serif; color: var(--ink); background: var(--bg-soft); -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: "Space Grotesk", sans-serif; }
+    .font-mono { font-family: "IBM Plex Mono", monospace; }
+    .manager-dialog { width: min(calc(100% - 2rem), 48rem); max-width: none; max-height: min(90vh, 58rem); margin: auto; padding: 0; border: 0; border-radius: 1.25rem; color: var(--ink); box-shadow: 0 24px 80px rgba(13, 18, 48, .28); }
+    .manager-dialog::backdrop { background: rgba(13, 18, 48, .58); backdrop-filter: blur(5px); }
+    #managerToast { opacity: 0; transform: translateY(.5rem); transition: opacity 180ms ease, transform 180ms ease; }
+    #managerToast.is-visible { opacity: 1; transform: translateY(0); }
+    #managerToast[hidden] { display: none; }
+    @media (prefers-reduced-motion: reduce) { #managerToast { transition: none; } }
+    @media (max-width: 640px) {
+      .snippets-table thead { display: none; }
+      .snippets-table, .snippets-table tbody { display: block; width: 100%; }
+      .snippets-table tbody tr { display: block; margin: .75rem; overflow: hidden; border: 1px solid rgba(18,22,46,.1); border-radius: .75rem; background: #fff; }
+      .snippets-table tbody td { display: grid; grid-template-columns: minmax(6rem, 34%) minmax(0, 1fr); gap: .75rem; padding: .75rem 1rem; border-top: 1px solid rgba(18,22,46,.07); overflow-wrap: anywhere; }
+      .snippets-table tbody td:first-child { border-top: 0; }
+      .snippets-table tbody td::before { content: attr(data-label); color: rgba(18,22,46,.55); font-size: .7rem; font-weight: 600; text-transform: uppercase; }
+      .snippets-table tbody td.action-cell { display: flex; justify-content: space-between; }
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-[var(--navy-950)] text-white">
+    <div class="mx-auto flex max-w-[90rem] items-center justify-between gap-4 px-4 py-2 sm:px-6">
+      <a href="/admin/dashboard" class="flex items-center gap-3">
+        <img src="/img/img_2.webp" alt="Fitness Extreme International" class="h-14 w-14 object-contain" />
+        <span class="font-display text-xs font-semibold tracking-wide sm:text-sm">Fitness Extreme Intl – Hyderabad</span>
+      </a>
+      <a href="/admin/logout" class="flex items-center gap-2 text-sm text-white/70 transition hover:text-white">
+        <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Logout
+      </a>
+    </div>
+  </header>
+
+  <div class="mx-auto grid max-w-[90rem] gap-6 px-4 py-6 sm:px-6 sm:py-10 lg:grid-cols-[15rem_minmax(0,1fr)]">
+    <aside class="h-fit rounded-2xl border border-black/5 bg-white p-3 shadow-sm">
+      <p class="px-3 pb-2 pt-1 font-mono text-[.65rem] font-semibold uppercase tracking-[.18em] text-black/40">Main menu</p>
+      <a href="/admin/dashboard" class="flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-[var(--navy-900)]">
+        <i class="fa-solid fa-inbox w-5 text-center" aria-hidden="true"></i> Leads
+      </a>
+      <div class="mt-1 rounded-xl bg-indigo-50/70 p-2">
+        <div class="flex items-center gap-3 px-2 py-2 text-sm font-semibold text-[var(--navy-900)]">
+          <i class="fa-solid fa-sliders w-5 text-center" aria-hidden="true"></i> Website Settings
+        </div>
+        <a href="/admin/header-code" aria-current="page" class="ml-7 flex items-center gap-2 rounded-lg bg-white px-3 py-2.5 text-sm font-semibold text-[var(--blue-500)] shadow-sm">
+          <span class="h-1.5 w-1.5 rounded-full bg-[var(--blue-500)]"></span> Header Code Manager
+        </a>
+      </div>
+    </aside>
+
+    <main class="min-w-0">
+      <div class="mb-6 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="mb-1 font-mono text-xs font-bold uppercase tracking-widest text-[var(--blue-500)]">Website Settings</p>
+          <h1 class="font-display text-2xl font-semibold text-[var(--navy-900)] md:text-3xl">Header Code Manager</h1>
+          <p class="mt-2 max-w-2xl text-sm leading-6 text-slate-500">Manage custom HTML, CSS, and JavaScript snippets for your storefront without editing its source files.</p>
+        </div>
+        <button id="addSnippetBtn" type="button" class="flex items-center justify-center gap-2 rounded-xl bg-[var(--navy-900)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--navy-950)] focus:outline-none focus:ring-4 focus:ring-blue-200">
+          <i class="fa-solid fa-plus" aria-hidden="true"></i> Add New Code
+        </button>
+      </div>
+
+      <div class="mb-6 flex items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-amber-950 shadow-sm" role="note">
+        <i class="fa-solid fa-triangle-exclamation mt-0.5 text-amber-600" aria-hidden="true"></i>
+        <div class="text-sm leading-6">
+          <p class="font-semibold">Only add code from trusted sources.</p>
+          <p class="text-amber-900/80">Active HTML and JavaScript run on your storefront and can execute arbitrary JavaScript. Review code before enabling a snippet. Inactive snippets are never sent to storefront visitors.</p>
+        </div>
+      </div>
+
+      <section class="overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm" aria-label="Saved code snippets">
+        <div class="flex flex-col gap-3 border-b border-black/5 p-4 md:flex-row md:items-center md:p-5">
+          <div class="relative min-w-0 flex-1">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-sm text-black/30" aria-hidden="true"></i>
+            <input id="searchInput" type="search" placeholder="Search code name or description..." aria-label="Search snippets" class="w-full rounded-lg border border-black/10 bg-[var(--bg-soft)] py-3 pl-11 pr-4 text-sm outline-none transition focus:border-[var(--blue-500)]" />
+          </div>
+          <select id="typeFilter" aria-label="Filter by code type" class="rounded-lg border border-black/10 bg-[var(--bg-soft)] px-4 py-3 text-sm outline-none focus:border-[var(--blue-500)]">
+            <option value="all">All types</option><option>HTML</option><option>CSS</option><option>JavaScript</option>
+          </select>
+          <select id="statusFilter" aria-label="Filter by status" class="rounded-lg border border-black/10 bg-[var(--bg-soft)] px-4 py-3 text-sm outline-none focus:border-[var(--blue-500)]">
+            <option value="all">All statuses</option><option value="active">Active</option><option value="inactive">Inactive</option>
+          </select>
+        </div>
+
+        <div id="loadingState" class="py-16 text-center text-sm text-slate-500" role="status">
+          <i class="fa-solid fa-circle-notch fa-spin mb-3 text-xl text-[var(--blue-500)]" aria-hidden="true"></i>
+          <p>Loading saved snippets…</p>
+        </div>
+        <div id="errorState" class="hidden p-8 text-center" role="alert">
+          <i class="fa-solid fa-triangle-exclamation text-2xl text-rose-500" aria-hidden="true"></i>
+          <p id="errorMessage" class="mt-3 text-sm text-slate-600">Could not load code snippets.</p>
+          <button id="retryBtn" type="button" class="mt-4 rounded-lg border border-black/10 px-4 py-2 text-sm font-semibold text-[var(--navy-900)] hover:bg-slate-50">Try again</button>
+        </div>
+        <div id="emptyState" class="hidden py-16 text-center">
+          <i class="fa-solid fa-code mb-3 text-2xl text-black/25" aria-hidden="true"></i>
+          <p id="emptyTitle" class="font-display font-semibold text-slate-600">No code snippets yet</p>
+          <p id="emptyDescription" class="mt-1 text-sm text-slate-400">Add a snippet to start customizing your storefront.</p>
+        </div>
+        <div id="tableWrap" class="hidden overflow-x-auto">
+          <table class="snippets-table min-w-full text-sm">
+            <thead>
+              <tr class="bg-[var(--navy-900)] text-left text-white">
+                <th class="whitespace-nowrap px-5 py-3.5 font-display font-semibold">Code name</th>
+                <th class="whitespace-nowrap px-5 py-3.5 font-display font-semibold">Type</th>
+                <th class="whitespace-nowrap px-5 py-3.5 font-display font-semibold">Location</th>
+                <th class="whitespace-nowrap px-5 py-3.5 font-display font-semibold">Status</th>
+                <th class="whitespace-nowrap px-5 py-3.5 font-display font-semibold">Last updated</th>
+                <th class="whitespace-nowrap px-5 py-3.5 font-display font-semibold">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="snippetsTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="snippetDialog" class="manager-dialog" aria-labelledby="formTitle">
+    <form id="snippetForm" class="flex max-h-[90vh] flex-col">
+      <div class="flex items-start justify-between gap-4 border-b border-black/5 px-5 py-4 sm:px-7">
+        <div><h2 id="formTitle" class="font-display text-xl font-bold text-[var(--navy-950)]">Add new code</h2><p class="mt-1 text-sm text-slate-500">Configure where the snippet runs on the storefront.</p></div>
+        <button id="closeFormBtn" type="button" aria-label="Close form" class="rounded-lg px-3 py-2 text-slate-400 hover:bg-slate-100 hover:text-slate-700"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      </div>
+      <div class="space-y-4 overflow-y-auto px-5 py-5 sm:px-7">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <label class="block text-sm font-semibold text-slate-700">Code name <span class="text-rose-500">*</span>
+            <input id="nameInput" name="name" required maxlength="120" placeholder="e.g. Google Analytics" class="mt-1.5 w-full rounded-lg border border-black/10 px-3.5 py-3 text-sm font-normal outline-none focus:border-[var(--blue-500)] focus:ring-2 focus:ring-blue-100" />
+          </label>
+          <label class="block text-sm font-semibold text-slate-700">Code type <span class="text-rose-500">*</span>
+            <select id="codeTypeInput" name="type" required class="mt-1.5 w-full rounded-lg border border-black/10 bg-white px-3.5 py-3 text-sm font-normal outline-none focus:border-[var(--blue-500)]"><option value="HTML">HTML</option><option value="CSS">CSS</option><option value="JavaScript">JavaScript</option></select>
+          </label>
+          <label class="block text-sm font-semibold text-slate-700">Insertion location <span class="text-rose-500">*</span>
+            <select id="locationInput" name="location" required class="mt-1.5 w-full rounded-lg border border-black/10 bg-white px-3.5 py-3 text-sm font-normal outline-none focus:border-[var(--blue-500)]"><option value="HEAD">HEAD — before &lt;/head&gt;</option><option value="BODY_START">BODY START — after &lt;body&gt;</option><option value="BODY_END">BODY END — before &lt;/body&gt;</option></select>
+          </label>
+          <label class="flex items-center gap-3 self-end rounded-lg border border-black/10 px-3.5 py-3 text-sm font-semibold text-slate-700">
+            <input id="activeInput" name="active" type="checkbox" class="h-4 w-4 accent-[var(--blue-500)]" />
+            Active on storefront
+          </label>
+        </div>
+        <label class="block text-sm font-semibold text-slate-700">Code <span class="text-rose-500">*</span>
+          <textarea id="codeInput" name="code" required maxlength="100000" rows="12" spellcheck="false" placeholder="Paste your HTML, CSS, or JavaScript here…" class="font-mono mt-1.5 w-full resize-y rounded-lg border border-black/10 bg-slate-950 px-4 py-3 text-xs leading-6 text-emerald-100 outline-none focus:border-[var(--blue-500)] focus:ring-2 focus:ring-blue-100"></textarea>
+          <span class="mt-1 block text-xs font-normal text-slate-400">Plain text editor. Maximum 100,000 characters.</span>
+        </label>
+        <label class="block text-sm font-semibold text-slate-700">Description <span class="font-normal text-slate-400">(optional)</span>
+          <textarea id="descriptionInput" name="description" maxlength="1000" rows="2" placeholder="Add a note about this snippet…" class="mt-1.5 w-full resize-y rounded-lg border border-black/10 px-3.5 py-3 text-sm font-normal outline-none focus:border-[var(--blue-500)] focus:ring-2 focus:ring-blue-100"></textarea>
+        </label>
+      </div>
+      <div class="flex flex-col-reverse gap-3 border-t border-black/5 px-5 py-4 sm:flex-row sm:justify-end sm:px-7">
+        <button id="cancelFormBtn" type="button" class="rounded-lg border border-black/10 px-5 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Cancel</button>
+        <button id="saveSnippetBtn" type="submit" class="rounded-lg bg-[var(--navy-900)] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[var(--navy-950)] disabled:cursor-wait disabled:opacity-60">Save snippet</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="deleteDialog" class="manager-dialog">
+    <div class="p-6 text-center sm:p-8">
+      <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-rose-50 text-rose-600"><i class="fa-solid fa-trash-can text-xl" aria-hidden="true"></i></div>
+      <h2 class="font-display text-xl font-bold text-[var(--navy-950)]">Delete this snippet?</h2>
+      <p id="deleteMessage" class="mt-2 text-sm leading-6 text-slate-600">This action cannot be undone.</p>
+      <div class="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-center">
+        <button id="cancelDeleteBtn" type="button" class="rounded-lg border border-black/10 px-5 py-3 text-sm font-semibold text-slate-600 hover:bg-slate-50">Keep snippet</button>
+        <button id="confirmDeleteBtn" type="button" class="rounded-lg bg-rose-600 px-5 py-3 text-sm font-semibold text-white hover:bg-rose-700 disabled:opacity-60">Yes, delete</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="managerToast" class="pointer-events-none fixed bottom-5 right-5 z-50 flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-5 py-4 text-sm font-semibold text-slate-800 shadow-xl" role="status" aria-live="polite" hidden>
+    <span id="toastIcon" class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-600"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+    <span id="toastMessage"></span>
+  </div>
+
+  <script>
+    const apiBase = '/admin/code-snippets';
+    const tableBody = document.getElementById('snippetsTableBody');
+    const loadingState = document.getElementById('loadingState');
+    const errorState = document.getElementById('errorState');
+    const emptyState = document.getElementById('emptyState');
+    const tableWrap = document.getElementById('tableWrap');
+    const snippetDialog = document.getElementById('snippetDialog');
+    const snippetForm = document.getElementById('snippetForm');
+    const deleteDialog = document.getElementById('deleteDialog');
+    const searchInput = document.getElementById('searchInput');
+    const typeFilter = document.getElementById('typeFilter');
+    const statusFilter = document.getElementById('statusFilter');
+    const saveButton = document.getElementById('saveSnippetBtn');
+    const toast = document.getElementById('managerToast');
+    let snippets = [];
+    let editingId = null;
+    let deletingId = null;
+    let toastTimer;
+
+    function showToast(message, isError = false) {
+      const icon = document.getElementById('toastIcon');
+      icon.className = isError
+        ? 'flex h-9 w-9 items-center justify-center rounded-full bg-rose-50 text-rose-600'
+        : 'flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-600';
+      icon.innerHTML = isError
+        ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+        : '<i class="fa-solid fa-check" aria-hidden="true"></i>';
+      document.getElementById('toastMessage').textContent = message;
+      toast.hidden = false;
+      requestAnimationFrame(() => toast.classList.add('is-visible'));
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(() => {
+        toast.classList.remove('is-visible');
+        window.setTimeout(() => { toast.hidden = true; }, 200);
+      }, 3200);
+    }
+
+    async function request(url, options = {}) {
+      const response = await fetch(url, {
+        ...options,
+        headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
+        credentials: 'same-origin'
+      });
+      let result;
+      try { result = await response.json(); }
+      catch { throw new Error('The server returned an unreadable response.'); }
+      if (!response.ok || !result.success) {
+        if (response.status === 401) throw new Error('Your admin session has expired. Please sign in again.');
+        throw new Error(result.message || 'The request could not be completed.');
+      }
+      return result;
+    }
+
+    function formatDate(value) {
+      const date = new Date(value);
+      return Number.isNaN(date.getTime()) ? '—' : date.toLocaleString(undefined, {
+        year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
+      });
+    }
+
+    function cell(label, text, className = '') {
+      const td = document.createElement('td');
+      td.dataset.label = label;
+      td.className = `px-5 py-3.5 ${className}`;
+      td.textContent = text;
+      return td;
+    }
+
+    function button(label, icon, className, handler) {
+      const element = document.createElement('button');
+      element.type = 'button';
+      element.className = className;
+      element.setAttribute('aria-label', label);
+      element.title = label;
+      element.innerHTML = `<i class="${icon}" aria-hidden="true"></i>`;
+      element.addEventListener('click', handler);
+      return element;
+    }
+
+    function render() {
+      const query = searchInput.value.trim().toLocaleLowerCase();
+      const type = typeFilter.value;
+      const status = statusFilter.value;
+      const filtered = snippets.filter(snippet => {
+        const matchesQuery = `${snippet.name} ${snippet.description || ''}`.toLocaleLowerCase().includes(query);
+        const matchesType = type === 'all' || snippet.type === type;
+        const matchesStatus = status === 'all' || (status === 'active') === Boolean(snippet.active);
+        return matchesQuery && matchesType && matchesStatus;
+      });
+
+      tableBody.replaceChildren();
+      loadingState.classList.add('hidden');
+      errorState.classList.add('hidden');
+      tableWrap.classList.toggle('hidden', filtered.length === 0);
+      emptyState.classList.toggle('hidden', filtered.length !== 0);
+      if (!filtered.length) {
+        const noSnippets = snippets.length === 0 && !query && type === 'all' && status === 'all';
+        document.getElementById('emptyTitle').textContent = noSnippets ? 'No code snippets yet' : 'No matching snippets';
+        document.getElementById('emptyDescription').textContent = noSnippets
+          ? 'Add a snippet to start customizing your storefront.'
+          : 'Try changing your search or filters.';
+        return;
+      }
+
+      for (const snippet of filtered) {
+        const row = document.createElement('tr');
+        row.className = 'border-t border-black/5 transition hover:bg-[var(--bg-soft)]';
+        const name = cell('Code name', snippet.name, 'font-medium text-[var(--navy-900)]');
+        if (snippet.description) {
+          const note = document.createElement('span');
+          note.className = 'mt-1 block max-w-xs truncate text-xs font-normal text-slate-400';
+          note.textContent = snippet.description;
+          name.appendChild(note);
+        }
+        row.append(name, cell('Type', snippet.type, 'text-slate-600'));
+        row.append(cell('Location', snippet.location.replace('_', ' '), 'font-mono text-xs text-slate-600'));
+
+        const statusCell = document.createElement('td');
+        statusCell.dataset.label = 'Status';
+        statusCell.className = 'px-5 py-3.5';
+        const statusButton = document.createElement('button');
+        statusButton.type = 'button';
+        statusButton.className = `inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold ${snippet.active ? 'bg-emerald-50 text-emerald-700' : 'bg-slate-100 text-slate-600'}`;
+        statusButton.setAttribute('aria-label', `${snippet.active ? 'Deactivate' : 'Activate'} ${snippet.name}`);
+        statusButton.innerHTML = `<span class="h-1.5 w-1.5 rounded-full ${snippet.active ? 'bg-emerald-500' : 'bg-slate-400'}"></span>${snippet.active ? 'Active' : 'Inactive'}`;
+        statusButton.addEventListener('click', () => toggleStatus(snippet));
+        statusCell.appendChild(statusButton);
+        row.appendChild(statusCell);
+        row.appendChild(cell('Last updated', formatDate(snippet.updated_at), 'whitespace-nowrap text-xs text-slate-500'));
+
+        const actions = document.createElement('td');
+        actions.dataset.label = 'Actions';
+        actions.className = 'action-cell whitespace-nowrap px-5 py-3.5';
+        actions.append(
+          button('Edit snippet', 'fa-solid fa-pen', 'mr-4 text-[var(--blue-500)] transition hover:text-[var(--navy-950)]', () => editSnippet(snippet.id)),
+          button('Delete snippet', 'fa-solid fa-trash-can', 'text-rose-500 transition hover:text-rose-700', () => confirmDelete(snippet))
+        );
+        row.appendChild(actions);
+        tableBody.appendChild(row);
+      }
+    }
+
+    async function loadSnippets() {
+      loadingState.classList.remove('hidden');
+      errorState.classList.add('hidden');
+      emptyState.classList.add('hidden');
+      tableWrap.classList.add('hidden');
+      try {
+        const result = await request(apiBase);
+        snippets = result.snippets;
+        render();
+      } catch (error) {
+        loadingState.classList.add('hidden');
+        errorState.classList.remove('hidden');
+        document.getElementById('errorMessage').textContent = error.message;
+      }
+    }
+
+    function openNewForm() {
+      editingId = null;
+      snippetForm.reset();
+      document.getElementById('formTitle').textContent = 'Add new code';
+      saveButton.textContent = 'Save snippet';
+      snippetDialog.showModal();
+      document.getElementById('nameInput').focus();
+    }
+
+    async function editSnippet(id) {
+      try {
+        const result = await request(`${apiBase}/${id}`);
+        const snippet = result.snippet;
+        editingId = snippet.id;
+        document.getElementById('formTitle').textContent = 'Edit code snippet';
+        document.getElementById('nameInput').value = snippet.name;
+        document.getElementById('codeTypeInput').value = snippet.type;
+        document.getElementById('locationInput').value = snippet.location;
+        document.getElementById('activeInput').checked = Boolean(snippet.active);
+        document.getElementById('codeInput').value = snippet.code;
+        document.getElementById('descriptionInput').value = snippet.description || '';
+        saveButton.textContent = 'Save changes';
+        snippetDialog.showModal();
+        document.getElementById('nameInput').focus();
+      } catch (error) {
+        showToast(error.message, true);
+      }
+    }
+
+    async function toggleStatus(snippet) {
+      try {
+        await request(`${apiBase}/${snippet.id}/status`, {
+          method: 'PATCH',
+          body: JSON.stringify({ active: !snippet.active })
+        });
+        showToast(`Snippet ${snippet.active ? 'deactivated' : 'activated'}.`);
+        await loadSnippets();
+      } catch (error) {
+        showToast(error.message, true);
+      }
+    }
+
+    function confirmDelete(snippet) {
+      deletingId = snippet.id;
+      document.getElementById('deleteMessage').textContent = `"${snippet.name}" will be permanently removed.`;
+      deleteDialog.showModal();
+    }
+
+    snippetForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (!snippetForm.reportValidity()) return;
+      const payload = {
+        name: document.getElementById('nameInput').value,
+        type: document.getElementById('codeTypeInput').value,
+        location: document.getElementById('locationInput').value,
+        code: document.getElementById('codeInput').value,
+        description: document.getElementById('descriptionInput').value,
+        active: document.getElementById('activeInput').checked
+      };
+      saveButton.disabled = true;
+      saveButton.textContent = 'Saving…';
+      try {
+        await request(editingId ? `${apiBase}/${editingId}` : apiBase, {
+          method: editingId ? 'PUT' : 'POST',
+          body: JSON.stringify(payload)
+        });
+        snippetDialog.close();
+        showToast(editingId ? 'Snippet updated successfully.' : 'Snippet added successfully.');
+        await loadSnippets();
+      } catch (error) {
+        showToast(error.message, true);
+      } finally {
+        saveButton.disabled = false;
+        saveButton.textContent = editingId ? 'Save changes' : 'Save snippet';
+      }
+    });
+
+    document.getElementById('confirmDeleteBtn').addEventListener('click', async event => {
+      const confirmButton = event.currentTarget;
+      confirmButton.disabled = true;
+      try {
+        await request(`${apiBase}/${deletingId}`, { method: 'DELETE' });
+        deleteDialog.close();
+        showToast('Snippet deleted successfully.');
+        await loadSnippets();
+      } catch (error) {
+        showToast(error.message, true);
+      } finally {
+        confirmButton.disabled = false;
+      }
+    });
+
+    document.getElementById('addSnippetBtn').addEventListener('click', openNewForm);
+    document.getElementById('closeFormBtn').addEventListener('click', () => snippetDialog.close());
+    document.getElementById('cancelFormBtn').addEventListener('click', () => snippetDialog.close());
+    document.getElementById('cancelDeleteBtn').addEventListener('click', () => deleteDialog.close());
+    document.getElementById('retryBtn').addEventListener('click', loadSnippets);
+    searchInput.addEventListener('input', render);
+    typeFilter.addEventListener('change', render);
+    statusFilter.addEventListener('change', render);
+    loadSnippets();
+  </script>
+</body>
+</html>

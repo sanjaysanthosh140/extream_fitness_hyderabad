@@ -11,23 +11,30 @@ Hyderabad, and its lead enquiry/admin dashboard.
 - **Website:** Static files in `public/`; the landing page is `public/index.html`
 - **Admin UI:** EJS templates in `views/`
 - **Lead API:** `POST /api/submit`
-- **Admin:** `/admin` (login, lead dashboard, and Excel/PDF export)
+- **Storefront code API:** `GET /api/header-code` (active snippets only)
+- **Admin:** `/admin` (login, lead dashboard, and Header Code Manager)
 - **Default port:** `2000` (override with `PORT`)
+
+The code manager's authenticated admin API supports `GET`/`POST
+/admin/code-snippets`, `GET`/`PUT`/`DELETE /admin/code-snippets/:id`, and
+`PATCH /admin/code-snippets/:id/status`. These endpoints require the existing
+administrator session; only `GET /api/header-code` is public.
 
 ### Project structure
 
 ```text
 gym_hydrabad/
 ├── database/
-│   └── schema.sql       # Creates the leads database and table
+│   └── schema.sql       # Creates the leads and header code tables
 ├── public/
 │   ├── index.html       # Public gym landing page
 │   └── img/             # Website images and logo
 ├── routes/
-│   ├── admin.js         # Admin login and lead dashboard routes
+│   ├── admin.js         # Admin login, dashboard, and code manager routes
 │   └── form.js          # Public lead submission API
 ├── views/
 │   ├── dashboard.ejs    # Leads dashboard and exports
+│   ├── header-code.ejs  # Header Code Manager
 │   └── login.ejs        # Admin login page
 ├── db.js                # MySQL connection pool
 ├── server.js            # Express application entry point
@@ -75,7 +82,7 @@ excluded by `.gitignore`.
 database named `emirates_first`. Set `DB_NAME` to that value unless you also
 update the schema to use a different database name.
 
-### Create the database and leads table
+### Create the database and application tables
 
 Run this from the project directory in a Bash-compatible shell with MySQL
 available:
@@ -85,8 +92,9 @@ mysql -u root -p < database/schema.sql
 ```
 
 The schema creates the database if it does not exist and creates the `leads`
-table. If using a restricted MySQL account, grant it access to the database
-before starting the app.
+and `header_code_snippets` tables. Apply the schema to an existing installation
+before using the Header Code Manager. If using a restricted MySQL account,
+grant it access to the database before starting the app.
 
 ### Start and open the application
 
@@ -98,7 +106,9 @@ node server.js
 
 - Website: `http://localhost:2000` (or the configured `PORT`)
 - Admin login: `http://localhost:2000/admin`
+- Header Code Manager: `http://localhost:2000/admin/header-code` (admin login required)
 - Lead submission endpoint: `POST http://localhost:2000/api/submit`
+- Active storefront snippets: `GET http://localhost:2000/api/header-code`
 
 Sign in using the `ADMIN_USERNAME` and `ADMIN_PASSWORD` values from `.env`.
 
@@ -131,8 +141,8 @@ mysql -u root -p < database/schema.sql
 ```
 
 For an existing installation, back up the database before applying schema
-changes. The current schema creates the `leads` table if it does not already
-exist; it does not replace existing lead data.
+changes. The current schema creates the `leads` and `header_code_snippets`
+tables if they do not already exist; it does not replace existing data.
 
 ### Configure production sessions before going live
 
@@ -198,6 +208,8 @@ sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 - [ ] The enquiry form submits and the lead is saved in MySQL.
 - [ ] `/admin` displays the login page and accepts the configured credentials.
 - [ ] The dashboard displays submitted leads.
+- [ ] An authorized administrator can add, edit, activate, deactivate, and delete storefront code snippets.
+- [ ] `GET /api/header-code` returns only active snippets and excludes descriptions and admin-only fields.
 - [ ] Excel and PDF exports work in the dashboard.
 - [ ] The production session store and secure cookie settings are configured.
 - [ ] PM2 starts the application after a server reboot.
